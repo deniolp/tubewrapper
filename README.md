@@ -1,2 +1,1 @@
-# myWebComp
-Learning Web Components
+# Проект для изучения технологий Web Components
