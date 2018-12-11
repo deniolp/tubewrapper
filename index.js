@@ -21,10 +21,10 @@ function getData(url) {
     xhr.responseType = 'json';
     
     xhr.addEventListener('load', function() {
-      if (xhr.status === '200') {
+      if (xhr.status === 200) {
         let json = xhr.response;
-        console.log(json);
-        resolve(json);
+        console.log(json.items);
+        resolve(json.items);
       } else {
         reject(xhr.statusText);
       }
@@ -38,3 +38,17 @@ function getData(url) {
     xhr.send();
   });
 }
+
+button.addEventListener('click', function() {
+  let search = input.value;
+  
+  while(videoList.firstChild) {
+    videoList.removeChild(videoList.firstChild);
+  }
+  
+  getData('https://www.googleapis.com/youtube/v3/search?part=snippet,id&order=date&channelId=' +  search + '&maxResults=50&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
+    .then(videos =>
+      videos.forEach(video =>
+        addVideoToList(video)))
+    .catch(error => console.log(error));
+});
