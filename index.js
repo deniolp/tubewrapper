@@ -14,7 +14,8 @@ function addVideoToList(video) {
 function createVideoElement(template, object) {
   let element = template.cloneNode(true);
   element.querySelector('.video__header').innerText = object.snippet.title;
-  element.querySelector('.video__link').src = 'https://www.youtube.com/watch?v=' + object.id.videoId;
+  element.querySelector('.video__link').href = 'https://www.youtube.com/watch?v=' + object.id.videoId;
+  element.querySelector('.video__image').src = 'https://img.youtube.com/vi/' + object.id.videoId + '/maxresdefault.jpg';
   
   return element;
 }
