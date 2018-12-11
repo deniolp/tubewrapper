@@ -51,9 +51,11 @@ button.addEventListener('click', function() {
   }
   
   getData('https://www.googleapis.com/youtube/v3/search?part=snippet,id&order=date&channelId=' +  search + '&maxResults=50&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
-    .then(videos =>
-      videos.forEach(video =>
-        addVideoToList(video)))
-    .then(videoList.appendChild(fragment))
+    .then(function (videos) {
+      videos.forEach(function (video) {
+        addVideoToList(video);
+      });
+      videoList.appendChild(fragment);
+    })
     .catch(error => console.log(error));
 });
