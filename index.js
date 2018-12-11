@@ -16,6 +16,7 @@ function createVideoElement(template, object) {
   element.querySelector('.video__header').innerText = object.snippet.title;
   element.querySelector('.video__link').href = 'https://www.youtube.com/watch?v=' + object.id.videoId;
   element.querySelector('.video__image').src = 'https://img.youtube.com/vi/' + object.id.videoId + '/maxresdefault.jpg';
+  element.querySelector('.video__image').alt = object.snippet.title;
   
   return element;
 }
