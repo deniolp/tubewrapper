@@ -3,16 +3,20 @@
 let videoList = document.querySelector('.videos');
 let button = document.querySelector('#button');
 let input = document.querySelector('#input');
+let fragment = document.createDocumentFragment();
 
 function addVideoToList(video) {
-  let fragment = document.createDocumentFragment();
+  let template = document.querySelector('#template').content.querySelector('.video');
   
+  fragment.appendChild(createVideoElement(template, video));
 }
 
-function createVideoElement(tempale, object) {
+function createVideoElement(template, object) {
   let element = template.cloneNode(true);
+  element.querySelector('.video__header').innerText = object.snippet.title;
+  element.querySelector('.video__link').src = 'https://www.youtube.com/watch?v=' + object.id.videoId;
   
-  
+  return element;
 }
 
 function getData(url) {
@@ -50,5 +54,6 @@ button.addEventListener('click', function() {
     .then(videos =>
       videos.forEach(video =>
         addVideoToList(video)))
+    .then(videoList.appendChild(fragment))
     .catch(error => console.log(error));
 });
