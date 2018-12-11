@@ -1,9 +1,10 @@
 .nav-bar {
-  background: linear-gradient(-90deg, #ff634763, tomato);
+  background-color: tomato;
   height: 60px;
   margin-bottom: 15px;
   padding-top: 10px;
   padding-left: 10px;
+  border-radius: 10px;
 }
 
 .nav-bar input {
@@ -25,6 +26,17 @@
   background-color: #000000;
 }
 
+.video__wrapper:hover .video__button-shape, .video__button:focus .video__button-shape {
+  fill: #ff0000;
+  fill-opacity: 1;
+}
+
+.video__header {
+  font-family: arial, sans-serif;
+  margin-bottom: 0;
+  min-height: 115px;
+}
+
 .video__link {
   position: absolute;
   top: 0;
@@ -41,3 +53,31 @@
   height: 100%;
   border: none;
 }
+
+.video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  width: 68px;
+  height: 48px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.video__button:focus {
+  outline: none;
+}
+
+.video__button-shape {
+  fill: #212121;
+  fill-opacity: 0.8;
+}
+
+.video__button-icon {
+  fill: #ffffff;
+}
+
