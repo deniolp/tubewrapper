@@ -22,9 +22,9 @@ function getData(url) {
     
     xhr.addEventListener('load', function() {
       if (xhr.status === 200) {
-        let json = xhr.response;
-        console.log(json.items);
-        resolve(json.items);
+        let json = xhr.response.items.slice(0, -1);
+        console.log(json);
+        resolve(json);
       } else {
         reject(xhr.statusText);
       }
