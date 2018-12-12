@@ -49,7 +49,7 @@
         .nav-bar__button {
           box-sizing: border-box;
           height: 30px;
-          padding: 8px;
+          padding: 7px;
           border: none;
           box-shadow: 0 0 3px rgba(146, 140, 140, 1);
           color: #bfb5b5;
