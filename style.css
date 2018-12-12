@@ -9,6 +9,7 @@ body {
 }
 
 .nav-bar {
+  display: flex;
   background-color: #ffffff;
   height: 60px;
   padding-top: 30px;
