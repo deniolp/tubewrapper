@@ -1,10 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .nav-bar {
-  background-color: tomato;
+  background-color: #d9e5ea;
   height: 60px;
-  margin-bottom: 15px;
-  padding-top: 10px;
+  padding-top: 30px;
   padding-left: 10px;
-  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .nav-bar input {
@@ -12,10 +16,17 @@
 }
 
 .videos {
+  background-color: #d1e7f5;
   margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 15px;
+}
+
+.video {
+  background-color: #d3e5f5;
 }
 
 .video__wrapper {
