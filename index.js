@@ -29,7 +29,7 @@ function getData(url) {
     
     xhr.addEventListener('load', function() {
       if (xhr.status === 200) {
-        let json = xhr.response.items.slice(0, -1);
+        let json = xhr.response.items;
         console.log(json);
         resolve(json);
       } else {
@@ -56,8 +56,9 @@ button.addEventListener('click', function() {
   getData('https://www.googleapis.com/youtube/v3/search?part=snippet,id&order=date&channelId=' +  search + '&maxResults=50&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
     .then(function (videos) {
       videos.forEach(function (video) {
-        addVideoToList(video);
-      });
+        if (video.id.kind === 'youtube#video') {
+          addVideoToList(video);
+        }});
       videoList.appendChild(fragment);
     })
     .catch(error => console.log(error));
