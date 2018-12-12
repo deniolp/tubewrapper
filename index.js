@@ -2,8 +2,8 @@
 
 (function () {
   let videoList = document.querySelector('.videos');
-  let button = document.querySelector('#button');
-  let input = document.querySelector('#input');
+  let button = document.querySelector('.nav-bar__button');
+  let input = document.querySelector('.nav-bar__input');
   let fragment = document.createDocumentFragment();
 
   function addVideoToList(video) {
