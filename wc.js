@@ -10,23 +10,23 @@
       let wrapper = document.createElement('div');
       let input = document.createElement('input');
       let button = document.createElement('button');
-      let script = document.createElement('script');
+      // let script = document.createElement('script');
       let style = document.createElement('style');
       
       wrapper.setAttribute('class', 'nav-bar__item');
       input.setAttribute('type', 'text');
       button.setAttribute('type', 'button');
       button.textContent = 'Поиск';
-      script.setAttribute('type', 'text/javascript');
+      // script.setAttribute('type', 'text/javascript');
       
       let placeholder = this.getAttribute('placeholder');
       let classInput = this.getAttribute('classInput');
       let classButton = this.getAttribute('classButton');
-      let srcScript = this.getAttribute('srcScript');
+      // let srcScript = this.getAttribute('srcScript');
       input.placeholder = placeholder;
       input.className = classInput;
       button.className = classButton;
-      script.src = srcScript;
+      // script.src = srcScript;
       
       style.textContent = `
         .nav-bar__item {
@@ -61,7 +61,7 @@
       wrapper.appendChild(style);
       wrapper.appendChild(input);
       wrapper.appendChild(button);
-      wrapper.appendChild(script);
+      // wrapper.appendChild(script);
     }
   }
   customElements.define('query-element', QueryElement);
