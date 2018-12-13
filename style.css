@@ -30,26 +30,6 @@ body {
   width: 300px;
 }
 
-/* .nav-bar__input {
-  width: 230px;
-  height: 30px;
-  box-shadow: 0 0 3px rgba(146,140,140,140.5);
-  border: none;
-  font-size: 14px;
-  color: #bfb5b5;
-  margin-right: 10px;
-  padding-left: 5px;
-}
-
-.nav-bar__button {
-  padding: 7px;
-  border: none;
-  box-shadow: 0 0 3px rgba(146, 140, 140, 1);
-  color: #bfb5b5;
-  font-size: 14px;
-  height: 30px;
-} */
-
 .videos {
   background-color: inherit;
   margin: 0;
