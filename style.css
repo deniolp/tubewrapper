@@ -17,12 +17,12 @@ body {
   justify-content: space-between;
   background-color: #ffffff;
   min-height: 100px;
-  padding-top: 35px;
+  padding-top: 30px;
   padding-left: 30px;
   padding-right: 30px;
   margin-bottom: 30px;
   box-shadow: 0 0 10px rgba(146,140,140,140.5);
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 .nav-bar__item {
@@ -30,7 +30,7 @@ body {
   width: 300px;
 }
 
-.nav-bar__input {
+/* .nav-bar__input {
   width: 230px;
   height: 30px;
   box-shadow: 0 0 3px rgba(146,140,140,140.5);
@@ -48,7 +48,7 @@ body {
   color: #bfb5b5;
   font-size: 14px;
   height: 30px;
-}
+} */
 
 .videos {
   background-color: inherit;
