@@ -2,6 +2,10 @@ html {
   box-sizing: border-box;
 }
 
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   padding: 30px;
@@ -9,35 +13,21 @@ body {
 }
 
 .nav-bar {
+  display: flex;
+  justify-content: space-between;
   background-color: #ffffff;
-  height: 60px;
+  min-height: 100px;
   padding-top: 30px;
   padding-left: 30px;
+  padding-right: 30px;
   margin-bottom: 30px;
   box-shadow: 0 0 10px rgba(146,140,140,140.5);
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 .nav-bar__item {
   display: flex;
-}
-
-.nav-bar input {
-  width: 230px;
-  min-height: 30px;
-  box-shadow: 0 0 3px rgba(146,140,140,140.5);
-  border: none;
-  font-size: 14px;
-  color: #bfb5b5;
-  margin-right: 10px;
-}
-
-.nav-bar__item button {
-  padding: 8px;
-  border: none;
-  box-shadow: 0 0 3px rgba(146, 140, 140, 1);
-  color: #bfb5b5;
-  font-size: 14px;
+  width: 300px;
 }
 
 .videos {

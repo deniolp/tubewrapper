@@ -9,10 +9,8 @@
 </head>
 <body>
   <div class="nav-bar">
-    <div class="nav-bar__item">
-      <input id="input" type="text" name="search" value="" placeholder="Введите id Youtube канала">
-      <button id="button" type="button" name="button">Поиск</button>
-    </div>
+    <query-element type="channel" placeholder="Введите id Youtube канала"></query-element>
+    <query-element type="search" placeholder="Введите поиск"></query-element>
   </div>
   <div class="videos"></div>
   
@@ -33,6 +31,7 @@
     </div>
   </template>
   
+  <script type="text/javascript" src="wc.js"></script>
   <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
