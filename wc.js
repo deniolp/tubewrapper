@@ -22,13 +22,13 @@
           margin-right: 10px;
           padding-left: 20px;
           padding-right: 20px;
-          border-radius: 24px;
+          border-radius: 2px;
           outline: none;
           box-sizing: border-box;
         }
         
         input:hover, input:focus, button:hover, button:focus {
-          box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+          box-shadow: 0 1px 16px 0 rgba(32,33,36,0.28);
           border-color: rgba(223,225,229,0);
         }
 
@@ -39,8 +39,9 @@
           color: #bfb5b5;
           font-size: 16px;
           height: 44px;
-          border-radius: 24px;
+          border-radius: 2px;
           outline: none;
+          background-color: #ffffff;
           box-sizing: border-box;
         }
         </style>
