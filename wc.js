@@ -92,7 +92,7 @@
         }
         
         .popup {
-          font-size: 5px;
+          font-size: 15px;
           width: 200px;
           display: inline-block;
           border: solid 1px black;
@@ -102,8 +102,8 @@
           opacity: 0;
           transition: 0.6s all;
           position: absolute;
-          bottom: 20px;
-          left: 10px;
+          top: -25px;
+          right: -20px;
           z-index: 4; 
         }
         
