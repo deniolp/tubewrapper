@@ -75,29 +75,6 @@
         .catch(error => console.log(error));
     }
     
-    buttons.forEach(function(button) {
-      if (button.id === 'channel') {
-        button.addEventListener('click', function() {
-          let search = inputs[0].value;
-          if (search !== '') {
-            removeVideos();
-            fillVideoList(CHANNEL_QUERY, search);
-            }
-        });
-      }
-      
-      if (button.id === 'search') {
-        button.addEventListener('click', function() {
-          let search = inputs[1].value;
-          if (search !== '') {
-            console.log(search);
-            removeVideos();
-            fillVideoList(SEARCH_QUERY, search);
-            }
-        });
-      }
-    });
-    
     function findVideos() {
       let videos = document.querySelectorAll('.video__wrapper');
       
@@ -148,5 +125,28 @@
       
       return 'https://www.youtube.com/embed/' + id + query;
     }
+    
+    buttons.forEach(function(button) {
+      if (button.id === 'channel') {
+        button.addEventListener('click', function() {
+          let search = inputs[0].value;
+          if (search !== '') {
+            removeVideos();
+            fillVideoList(CHANNEL_QUERY, search);
+            }
+        });
+      }
+      
+      if (button.id === 'search') {
+        button.addEventListener('click', function() {
+          let search = inputs[1].value;
+          if (search !== '') {
+            console.log(search);
+            removeVideos();
+            fillVideoList(SEARCH_QUERY, search);
+            }
+        });
+      }
+    });
   }, 300);
 })();
