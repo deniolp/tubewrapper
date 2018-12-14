@@ -2,6 +2,9 @@
 
 (function () {
   setTimeout (function() {
+    let CHANNEL_QUERY = 'order=date&channelId=';
+    let SEARCH_QUERY = 'q=';
+    
     let videoList = document.querySelector('.videos');
     let shadows = document.querySelectorAll('query-element');
     let buttons = [];
@@ -59,23 +62,26 @@
       }
     }
     
+    function fillVideoList(query, search) {
+      getData('https://www.googleapis.com/youtube/v3/search?part=snippet,id&' + query +  search + '&maxResults=50&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
+        .then(function (videos) {
+          videos.forEach(function (video) {
+            if (video.id.kind === 'youtube#video') {
+              addVideoToList(video);
+            }});
+          videoList.appendChild(fragment);
+          findVideos();
+        })
+        .catch(error => console.log(error));
+    }
+    
     buttons.forEach(function(button) {
       if (button.id === 'channel') {
         button.addEventListener('click', function() {
           let search = inputs[0].value;
           if (search !== '') {
             removeVideos();
-            
-            getData('https://www.googleapis.com/youtube/v3/search?part=snippet,id&order=date&channelId=' +  search + '&maxResults=50&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
-              .then(function (videos) {
-                videos.forEach(function (video) {
-                  if (video.id.kind === 'youtube#video') {
-                    addVideoToList(video);
-                  }});
-                videoList.appendChild(fragment);
-                findVideos();
-              })
-              .catch(error => console.log(error));
+            fillVideoList(CHANNEL_QUERY, search);
             }
         });
       }
@@ -86,17 +92,7 @@
           if (search !== '') {
             console.log(search);
             removeVideos();
-              
-            getData('https://www.googleapis.com/youtube/v3/search?part=snippet,id&q=' +  search + '&maxResults=50&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
-              .then(function (videos) {
-                videos.forEach(function (video) {
-                  if (video.id.kind === 'youtube#video') {
-                    addVideoToList(video);
-                  }});
-                videoList.appendChild(fragment);
-                findVideos();
-              })
-              .catch(error => console.log(error));
+            fillVideoList(SEARCH_QUERY, search);
             }
         });
       }
