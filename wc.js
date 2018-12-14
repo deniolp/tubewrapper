@@ -38,11 +38,33 @@
           box-shadow: none;
           color: #bfb5b5;
           font-size: 16px;
+          max-width: 65px;
           height: 44px;
           border-radius: 2px;
           outline: none;
           background-color: #ffffff;
           box-sizing: border-box;
+        }
+        
+        .nav-bar__item {
+          display: flex;
+          width: 325px;
+        }
+        
+        @media (max-width: 785px) {
+          .nav-bar__item {
+            flex-direction: column;
+          }
+          
+          input {
+            margin-bottom: 10px;
+          }
+        }
+        
+        @media (max-width: 695px) {
+          .nav-bar__item{
+            margin-bottom: 10px;
+          }
         }
         </style>
         <div class="nav-bar__item">
