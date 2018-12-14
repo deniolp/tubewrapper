@@ -1,6 +1,9 @@
 'use stricts';
 
 (function() {
+  let texts = [];
+  let i = 0;
+  
   class QueryElement extends HTMLElement {
     constructor() {
       super();
@@ -68,8 +71,9 @@
         }
         </style>
         <div class="nav-bar__item">
-          <input type="text" name="search" value="" placeholder="">
+          <input type="text" name="search" value="" placeholder="" text="">
           <button type="button" id="" name="button">Поиск</button>
+          <popup-info></popup-info>
         </div>
       `;
 
@@ -79,6 +83,7 @@
       let input = shadow.querySelector('input');
       let type = this.getAttribute('type');
       let placeHolder = this.getAttribute('placeholder');
+      texts.push(this.getAttribute('text'));
       input.placeholder = placeHolder;
       button.id = type;
       input.id = type;
@@ -96,7 +101,6 @@
       let wrapper = document.createElement('span');
       let icon = document.createElement('span');
       let popup = document.createElement('span');
-      let text = this.getAttribute('text');
       let img = document.createElement('img');
       let style = document.createElement('style');
 
@@ -104,7 +108,8 @@
       icon.className = 'icon';
       icon.setAttribute('tabindex', 0);
       popup.className = 'popup';
-      popup.textContent = text;
+      popup.textContent = texts[i];
+      i++;
       img.src = 'media/info.png';
       icon.appendChild(img);
 
@@ -124,15 +129,15 @@
           opacity: 0;
           transition: 0.6s all;
           position: absolute;
-          top: -25px;
-          right: -65px;
+          top: 45px;
+          right: 0;
           z-index: 4; 
         }
         
         .icon {
           position: absolute;
-          top: -22px;
-          right: 215px;
+          top: 20px;
+          left: 5px;
         }
         
         img {
