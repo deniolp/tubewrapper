@@ -36,6 +36,18 @@ body {
   grid-gap: 25px;
 }
 
+@media (max-width: 800px) {
+  .videos {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .videos {
+    grid-template-columns: 1fr;
+  }
+}
+
 .video {
   background-color: #ffffff;
   box-shadow: 0 0 10px rgba(146, 140, 140, 140.5);
