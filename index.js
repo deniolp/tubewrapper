@@ -40,7 +40,6 @@
         xhr.addEventListener('load', function() {
           if (xhr.status === 200) {
             let json = xhr.response.items;
-            console.log(json);
             resolve(json);
           } else {
             reject(xhr.statusText);
@@ -142,7 +141,6 @@
         button.addEventListener('click', function() {
           let search = inputs[1].value;
           if (search !== '') {
-            console.log(search);
             removeVideos();
             fillVideoList(SEARCH_QUERY, search);
           }

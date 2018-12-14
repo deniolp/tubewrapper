@@ -117,3 +117,16 @@ body {
   fill: #ffffff;
 }
 
+query-element {
+  position: relative;
+}
+
+query-element::after {
+  position: absolute;
+  content: '';
+  top: -20px;
+  left: 270px;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+}
