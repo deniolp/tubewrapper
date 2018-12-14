@@ -10,7 +10,6 @@
       buttons.push(shadow.shadowRoot.querySelector('button'));
       inputs.push(shadow.shadowRoot.querySelector('input'));
     });
-    let input = document.querySelector('query-element').shadowRoot.querySelector('input');
     let fragment = document.createDocumentFragment();
 
     function addVideoToList(video) {
