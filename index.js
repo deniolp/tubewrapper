@@ -53,14 +53,18 @@
       });
     }
     
+    function removeVideos() {
+      while(videoList.firstChild) {
+        videoList.removeChild(videoList.firstChild);
+      }
+    }
+    
     buttons.forEach(function(button) {
       if (button.id === 'channel') {
         button.addEventListener('click', function() {
           let search = inputs[0].value;
           if (search !== '') {
-            while(videoList.firstChild) {
-              videoList.removeChild(videoList.firstChild);
-            }
+            removeVideos();
             
             getData('https://www.googleapis.com/youtube/v3/search?part=snippet,id&order=date&channelId=' +  search + '&maxResults=50&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
               .then(function (videos) {
@@ -81,9 +85,7 @@
           let search = inputs[1].value;
           if (search !== '') {
             console.log(search);
-            while(videoList.firstChild) {
-              videoList.removeChild(videoList.firstChild);
-            }
+            removeVideos();
               
             getData('https://www.googleapis.com/youtube/v3/search?part=snippet,id&q=' +  search + '&maxResults=50&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
               .then(function (videos) {
