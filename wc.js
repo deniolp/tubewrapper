@@ -1,14 +1,14 @@
 'use stricts';
 
-(function () {
+(function() {
   class QueryElement extends HTMLElement {
     constructor() {
       super();
-      
+
       let shadow = this.attachShadow({
         mode: 'open'
       });
-      
+
       let template = document.createElement('template');
       template.innerHTML = `
         <style>
@@ -50,9 +50,9 @@
           <button type="button" id="" name="button">Поиск</button>
         </div>
       `;
-      
+
       shadow.appendChild(template.content.cloneNode(true));
-      
+
       let button = shadow.querySelector('button');
       let input = shadow.querySelector('input');
       let type = this.getAttribute('type');
@@ -62,22 +62,22 @@
       input.id = type;
     }
   }
-  
+
   class PopupInfo extends HTMLElement {
     constructor() {
       super();
-      
+
       let shadow = this.attachShadow({
         mode: 'open'
       });
-      
+
       let wrapper = document.createElement('span');
       let icon = document.createElement('span');
       let popup = document.createElement('span');
       let text = this.getAttribute('text');
       let img = document.createElement('img');
       let style = document.createElement('style');
-      
+
       wrapper.className = 'wrapper';
       icon.className = 'icon';
       icon.setAttribute('tabindex', 0);
@@ -85,7 +85,7 @@
       popup.textContent = text;
       img.src = 'media/info.png';
       icon.appendChild(img);
-      
+
       style.textContent = `
         .wrapper {
           position: relative;
@@ -121,14 +121,14 @@
           opacity: 1;
         }
       `
-      
+
       shadow.appendChild(style);
       shadow.appendChild(wrapper);
       wrapper.appendChild(icon);
       wrapper.appendChild(popup);
     }
   }
-  
+
   customElements.define('query-element', QueryElement);
   customElements.define('popup-info', PopupInfo);
 })();
