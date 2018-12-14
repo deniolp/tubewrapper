@@ -88,7 +88,7 @@
 
       style.textContent = `
         .wrapper {
-          position: relative;
+          position: absolute;
         }
         
         .popup {
@@ -103,7 +103,7 @@
           transition: 0.6s all;
           position: absolute;
           top: -25px;
-          right: -20px;
+          right: -65px;
           z-index: 4; 
         }
         
