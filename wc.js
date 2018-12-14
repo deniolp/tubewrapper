@@ -109,8 +109,8 @@
         
         .icon {
           position: absolute;
-          top: 37px;
-          left: 327px;
+          top: -22px;
+          right: 215px;
         }
         
         img {
@@ -124,8 +124,8 @@
       
       shadow.appendChild(style);
       shadow.appendChild(wrapper);
-      shadow.appendChild(icon);
-      shadow.appendChild(popup);
+      wrapper.appendChild(icon);
+      wrapper.appendChild(popup);
     }
   }
   
