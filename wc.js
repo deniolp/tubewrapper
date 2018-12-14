@@ -54,7 +54,7 @@
           width: 325px;
         }
         
-        @media (max-width: 785px) {
+        @media (max-width: 800px) {
           .nav-bar__item {
             flex-direction: column;
           }
@@ -138,6 +138,18 @@
           position: absolute;
           top: 20px;
           left: 5px;
+        }
+        
+        @media (max-width: 800px) {
+          .icon {
+            top: -25px;
+            left: 70px;
+          }
+          
+          .popup {
+            top: -20px;
+            left: 95px;
+          }
         }
         
         img {
