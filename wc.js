@@ -117,7 +117,7 @@
           width: 20px;
         }
         
-        .icon:hover + .popup, icon:focus + .popup {
+        .icon:hover + .popup, .icon:focus + .popup {
           opacity: 1;
         }
       `
