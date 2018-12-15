@@ -62,7 +62,7 @@
     }
 
     function fillVideoList(query, search) {
-      getData('https://www.googleapis.com/youtube/v3/search?part=snippet,id&' + query + search + '&maxResults=50&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
+      getData('https://www.googleapis.com/youtube/v3/search?part=snippet,id&' + query + search + '&maxResults=49&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
         .then(function(videos) {
           videos.forEach(function(video) {
             if (video.id.kind === 'youtube#video') {
