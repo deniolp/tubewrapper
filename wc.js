@@ -30,7 +30,7 @@
           box-sizing: border-box;
         }
         
-        @media (max-width: 835px) {
+        @media (max-width: 440px) {
           input {
             width: 215px;
           }
