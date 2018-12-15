@@ -40,7 +40,7 @@ body {
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 655px) {
   .videos {
     grid-template-columns: 1fr;
   }

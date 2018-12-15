@@ -30,6 +30,12 @@
           box-sizing: border-box;
         }
         
+        @media (max-width: 835px) {
+          input {
+            width: 215px;
+          }
+        }
+        
         input:hover, input:focus, button:hover, button:focus {
           box-shadow: 0 1px 16px 0 rgba(32,33,36,0.28);
           border-color: rgba(223,225,229,0);
@@ -66,12 +72,6 @@
           }
           
           input {
-            margin-bottom: 10px;
-          }
-        }
-        
-        @media (max-width: 695px) {
-          .nav-bar__item{
             margin-bottom: 10px;
           }
         }
