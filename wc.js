@@ -127,12 +127,11 @@
         .popup {
           font-size: 15px;
           width: 200px;
-          display: inline-block;
+          display: none;
           border: solid 1px black;
           padding: 8px;
           background: #ffffff;
           border-radius: 10px;
-          opacity: 0;
           transition: 0.6s all;
           position: absolute;
           top: 45px;
@@ -169,7 +168,7 @@
         }
         
         .icon:hover + .popup, .icon:focus + .popup {
-          opacity: 1;
+          display: inline-block;
         }
       `
 
