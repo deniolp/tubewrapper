@@ -77,7 +77,7 @@
         }
         </style>
         <div class="nav-bar__item">
-          <input type="text" name="search" value="" placeholder="" text="">
+          <input type="text" id="" name="search" value="" placeholder="" text="">
           <button type="button" id="" name="button">Поиск</button>
           <popup-info></popup-info>
         </div>
