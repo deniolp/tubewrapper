@@ -51,6 +51,10 @@ body {
   box-shadow: 0 0 10px rgba(146, 140, 140, 140.5);
 }
 
+.video:hover {
+  box-shadow: none;
+}
+
 .video__wrapper {
   position: relative;
   width: 100%;
