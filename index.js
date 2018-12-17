@@ -2,16 +2,6 @@
 
 (function() {
   setTimeout(function() {
-    let CHANNEL_QUERY = 'order=date&channelId=';
-    let SEARCH_QUERY = 'q=';
-    let KEYCODE_ENTER = 13;
-
-    let videoList = document.querySelector('.videos');
-    let shadows = document.querySelectorAll('query-element');
-    let buttons = [];
-    let inputs = [];
-    let fragment = document.createDocumentFragment();
-
     function addVideoToList(video) {
       let template = document.querySelector('#template').content.querySelector('.video');
 
@@ -67,7 +57,7 @@
       if (query === 'search') {
         queryURL = SEARCH_QUERY;
       }
-      
+
       getData('https://www.googleapis.com/youtube/v3/search?part=snippet,id&' + queryURL + search + '&maxResults=49&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
         .then(function(videos) {
           videos.forEach(function(video) {
@@ -131,12 +121,22 @@
 
       return 'https://www.youtube.com/embed/' + id + query;
     }
-    
+
+    let CHANNEL_QUERY = 'order=date&channelId=';
+    let SEARCH_QUERY = 'q=';
+    let KEYCODE_ENTER = 13;
+
+    let videoList = document.querySelector('.videos');
+    let shadows = document.querySelectorAll('query-element');
+    let buttons = [];
+    let inputs = [];
+    let fragment = document.createDocumentFragment();
+
     shadows.forEach(function(shadow) {
       buttons.push(shadow.shadowRoot.querySelector('button'));
       inputs.push(shadow.shadowRoot.querySelector('input'));
     });
-    
+
     inputs.forEach(function(input) {
       input.addEventListener('focus', function() {
         input.addEventListener('keydown', function(evt) {
@@ -150,7 +150,7 @@
         });
       });
     });
-    
+
     buttons.forEach(function(button) {
       button.addEventListener('click', function() {
         let search = inputs[buttons.indexOf(button)].value;
