@@ -92,7 +92,6 @@
       texts.push(this.getAttribute('text'));
       input.placeholder = placeHolder;
       button.id = type;
-      input.id = type;
     }
   }
 
