@@ -21,13 +21,14 @@
           border: 1px solid #dfe1e5;
           box-shadow: none;
           font-size: 16px;
-          color: #bfb5b5;
+          color: #fff;
           margin-right: 10px;
           padding-left: 20px;
           padding-right: 20px;
           border-radius: 2px;
           outline: none;
           box-sizing: border-box;
+          background-color: #794545;
         }
         
         @media (max-width: 440px) {
@@ -37,7 +38,7 @@
         }
         
         input:hover, input:focus, button:hover, button:focus {
-          box-shadow: 0 1px 16px 0 rgba(32,33,36,0.28);
+          box-shadow: 0 1px 20px 0 rgba(32,33,36,0.28);
           border-color: rgba(223,225,229,0);
         }
 
@@ -45,13 +46,13 @@
           padding: 7px;
           border: 1px solid #dfe1e5;
           box-shadow: none;
-          color: #bfb5b5;
+          color: #fff;
           font-size: 16px;
           max-width: 65px;
           height: 44px;
           border-radius: 2px;
           outline: none;
-          background-color: #ffffff;
+          background-color: #794545;
           box-sizing: border-box;
         }
         
