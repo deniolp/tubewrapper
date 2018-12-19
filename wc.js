@@ -61,7 +61,7 @@
           width: 325px;
         }
         
-        @media (max-width: 835px) {
+        @media (max-width: 1185px) {
           .nav-bar__item {
             margin-bottom: 10px;
           }

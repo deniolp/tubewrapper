@@ -31,13 +31,15 @@ body {
   grid-gap: 25px;
 }
 
+@media (max-width: 1185px) {
+  .nav-bar {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 835px) {
   .videos {
     grid-template-columns: 1fr 1fr;
-  }
-  
-  .nav-bar {
-    flex-direction: column;
   }
 }
 
