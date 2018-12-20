@@ -32,6 +32,11 @@
         xhr.addEventListener('load', function() {
           if (xhr.status === 200) {
             let json = xhr.response;
+            let footer = document.querySelector('.footer');
+            
+            if (json.pageInfo.totalResults >= 50) {
+              footer.classList.add('footer--visible');
+            }
             resolve(json);
           } else {
             reject(xhr.statusText);
@@ -53,7 +58,10 @@
       }
     }
 
-    function fillVideoList(query, search) {
+    function fillVideoList(query, search, token) {
+      if (token === undefined) {
+        token = '';
+      }
       removeVideos();
       let queryURL = '';
       if (query === 'channel') {
@@ -65,18 +73,26 @@
       if (query === 'name') {
         queryURL = NAME_QUERY;
         
-        getData('https://www.googleapis.com/youtube/v3/channels?' + queryURL + search +  '&part=snippet&maxResults=49&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
+        getData('https://www.googleapis.com/youtube/v3/channels?' + queryURL + search +  '&part=snippet&maxResults=50&pageToken=' + token + '&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
           .then(function(response) {
             search = response.items[0].id;
             queryURL = CHANNEL_QUERY;
             
-            getData('https://www.googleapis.com/youtube/v3/search?part=snippet,id&' + queryURL + search + '&maxResults=49&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
+            getData('https://www.googleapis.com/youtube/v3/search?part=snippet,id&' + queryURL + search + '&maxResults=50&pageToken=' + token + '&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
               .then(function(videos) {
                 videos.items.forEach(function(video) {
                   if (video.id.kind === 'youtube#video') {
                     addVideoToList(video);
                   }
                 });
+                tokenNext = videos.nextPageToken;
+                tokenPrev = videos.prevPageToken;
+                if (tokenPrev !== undefined) {
+                  buttonForPrev.classList.remove('footer__button--disabled');
+                }
+                if (tokenPrev === undefined) {
+                  buttonForPrev.classList.add('footer__button--disabled');
+                }
                 videoList.appendChild(fragment);
                 findVideos();
               })
@@ -87,13 +103,21 @@
           return;
       }
 
-      getData('https://www.googleapis.com/youtube/v3/search?part=snippet,id&' + queryURL + search + '&maxResults=49&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
+      getData('https://www.googleapis.com/youtube/v3/search?part=snippet,id&' + queryURL + search + '&maxResults=50&pageToken=' + token + '&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
         .then(function(videos) {
           videos.items.forEach(function(video) {
             if (video.id.kind === 'youtube#video') {
               addVideoToList(video);
             }
           });
+          tokenNext = videos.nextPageToken;
+          tokenPrev = videos.prevPageToken;
+          if (tokenPrev !== undefined) {
+            buttonForPrev.classList.remove('footer__button--disabled');
+          }
+          if (tokenPrev === undefined) {
+            buttonForPrev.classList.add('footer__button--disabled');
+          }
           videoList.appendChild(fragment);
           findVideos();
         })
@@ -102,7 +126,7 @@
 
     function findVideos() {
       let videos = document.querySelectorAll('.video__wrapper');
-
+      
       for (var i = 0; i < videos.length; i++) {
         setupVideo(videos[i]);
       }
@@ -153,9 +177,15 @@
 
     let videoList = document.querySelector('.videos');
     let shadows = document.querySelectorAll('query-element');
+    let buttonForPrev = document.querySelector('.footer__button--prev');
+    let buttonForNext = document.querySelector('.footer__button--next');
     let buttons = [];
     let inputs = [];
     let fragment = document.createDocumentFragment();
+    let tokenPrev = '';
+    let tokenNext = '';
+    let query = '';
+    let search = '';
 
     shadows.forEach(function(shadow) {
       buttons.push(shadow.shadowRoot.querySelector('button'));
@@ -166,9 +196,9 @@
       input.addEventListener('focus', function() {
         input.addEventListener('keydown', function(evt) {
           if (evt.keyCode === KEYCODE_ENTER) {
-            let search = input.value;
+            search = input.value;
             if (search !== '') {
-              let query = buttons[inputs.indexOf(input)].id;
+              query = buttons[inputs.indexOf(input)].id;
               fillVideoList(query, search);
             }
           }
@@ -178,11 +208,19 @@
 
     buttons.forEach(function(button) {
       button.addEventListener('click', function() {
-        let search = inputs[buttons.indexOf(button)].value;
+        search = inputs[buttons.indexOf(button)].value;
         if (search !== '') {
           fillVideoList(button.id, search);
         }
       });
+    });
+    
+    buttonForPrev.addEventListener('click', function() {
+      fillVideoList(query, search, tokenPrev);
+    });
+    
+    buttonForNext.addEventListener('click', function() {
+      fillVideoList(query, search, tokenNext);
     });
   }, 300);
 })();
