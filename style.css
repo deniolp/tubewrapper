@@ -15,7 +15,7 @@ body {
 .nav-bar {
   display: flex;
   justify-content: space-between;
-  background-color: #ff6347cc;
+  background-color: #f97259b3;
   min-height: 100px;
   padding: 30px 60px 30px 30px;
   margin-bottom: 20px;
@@ -51,7 +51,7 @@ body {
 
 .video {
   background-color: #e3d9d81a;
-  box-shadow: 0 0 20px rgba(146, 140, 140, 140.5);
+  box-shadow: 0 0 20px rgb(121, 69, 69);
 }
 
 .video:hover {
