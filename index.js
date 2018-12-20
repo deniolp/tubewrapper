@@ -87,6 +87,12 @@
                 });
                 tokenNext = videos.nextPageToken;
                 tokenPrev = videos.prevPageToken;
+                if (tokenPrev !== undefined) {
+                  buttonForPrev.classList.remove('footer__button--disabled');
+                }
+                if (tokenPrev === undefined) {
+                  buttonForPrev.classList.add('footer__button--disabled');
+                }
                 videoList.appendChild(fragment);
                 findVideos();
               })
@@ -106,6 +112,12 @@
           });
           tokenNext = videos.nextPageToken;
           tokenPrev = videos.prevPageToken;
+          if (tokenPrev !== undefined) {
+            buttonForPrev.classList.remove('footer__button--disabled');
+          }
+          if (tokenPrev === undefined) {
+            buttonForPrev.classList.add('footer__button--disabled');
+          }
           videoList.appendChild(fragment);
           findVideos();
         })
