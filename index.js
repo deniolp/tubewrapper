@@ -3,8 +3,8 @@
 (function() {
   setTimeout(function() {
     let CHANNEL_QUERY = 'order=date&channelId=';
-    let SEARCH_QUERY = 'q=';
-    let NAME_QUERY = 'forUsername=';
+    let SEARCH_QUERY = 'order=viewCount&q=';
+    let NAME_QUERY = 'order=date&forUsername=';
     let KEYCODE_ENTER = 13;
     
     function addVideoToList(video) {
@@ -31,7 +31,7 @@
 
         xhr.addEventListener('load', function() {
           if (xhr.status === 200) {
-            let json = xhr.response.items;
+            let json = xhr.response;
             resolve(json);
           } else {
             reject(xhr.statusText);
@@ -67,12 +67,12 @@
         
         getData('https://www.googleapis.com/youtube/v3/channels?' + queryURL + search +  '&part=snippet&maxResults=49&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
           .then(function(response) {
-            search = response[0].id;
+            search = response.items[0].id;
             queryURL = CHANNEL_QUERY;
             
             getData('https://www.googleapis.com/youtube/v3/search?part=snippet,id&' + queryURL + search + '&maxResults=49&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
               .then(function(videos) {
-                videos.forEach(function(video) {
+                videos.items.forEach(function(video) {
                   if (video.id.kind === 'youtube#video') {
                     addVideoToList(video);
                   }
@@ -89,7 +89,7 @@
 
       getData('https://www.googleapis.com/youtube/v3/search?part=snippet,id&' + queryURL + search + '&maxResults=49&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
         .then(function(videos) {
-          videos.forEach(function(video) {
+          videos.items.forEach(function(video) {
             if (video.id.kind === 'youtube#video') {
               addVideoToList(video);
             }
