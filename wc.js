@@ -61,13 +61,13 @@
           width: 325px;
         }
         
-        @media (max-width: 1185px) {
+        @media (max-width: 1145px) {
           .nav-bar__item {
             margin-bottom: 10px;
           }
         }
         
-        @media (max-width: 655px) {
+        @media (max-width: 620px) {
           .nav-bar__item {
             flex-direction: column;
           }
@@ -151,7 +151,7 @@
           }
         }
         
-        @media (max-width: 655px) {
+        @media (max-width: 620px) {
           .icon {
             top: -25px;
             left: 70px;
