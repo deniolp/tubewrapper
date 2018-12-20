@@ -104,7 +104,7 @@
       let videos = document.querySelectorAll('.video__wrapper');
       let footer = document.querySelector('.footer');
       
-      if(videos.length = 49) {
+      if (videos.length >= 48) {
         footer.classList.add('footer--visible');
       }
       
