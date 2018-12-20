@@ -131,3 +131,16 @@ body {
 .video__button-icon {
   fill: #ffffff;
 }
+
+.footer {
+  display: none;
+  min-height: 40px;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f97259b3;
+  box-shadow: 0 0 1px rgba(146, 140, 140, 140.5);
+}
+
+.footer--visible {
+  display: block;
+}

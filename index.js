@@ -102,7 +102,12 @@
 
     function findVideos() {
       let videos = document.querySelectorAll('.video__wrapper');
-
+      let footer = document.querySelector('.footer');
+      
+      if(videos.length = 49) {
+        footer.classList.add('footer--visible');
+      }
+      
       for (var i = 0; i < videos.length; i++) {
         setupVideo(videos[i]);
       }
