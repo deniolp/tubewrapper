@@ -32,6 +32,11 @@
         xhr.addEventListener('load', function() {
           if (xhr.status === 200) {
             let json = xhr.response;
+            let footer = document.querySelector('.footer');
+            
+            if (json.pageInfo.totalResults >= 50) {
+              footer.classList.add('footer--visible');
+            }
             resolve(json);
           } else {
             reject(xhr.statusText);
@@ -68,12 +73,12 @@
       if (query === 'name') {
         queryURL = NAME_QUERY;
         
-        getData('https://www.googleapis.com/youtube/v3/channels?' + queryURL + search +  '&part=snippet&maxResults=49&pageToken=' + token + '&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
+        getData('https://www.googleapis.com/youtube/v3/channels?' + queryURL + search +  '&part=snippet&maxResults=50&pageToken=' + token + '&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
           .then(function(response) {
             search = response.items[0].id;
             queryURL = CHANNEL_QUERY;
             
-            getData('https://www.googleapis.com/youtube/v3/search?part=snippet,id&' + queryURL + search + '&maxResults=49&pageToken=' + token + '&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
+            getData('https://www.googleapis.com/youtube/v3/search?part=snippet,id&' + queryURL + search + '&maxResults=50&pageToken=' + token + '&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
               .then(function(videos) {
                 videos.items.forEach(function(video) {
                   if (video.id.kind === 'youtube#video') {
@@ -92,7 +97,7 @@
           return;
       }
 
-      getData('https://www.googleapis.com/youtube/v3/search?part=snippet,id&' + queryURL + search + '&maxResults=49&pageToken=' + token + '&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
+      getData('https://www.googleapis.com/youtube/v3/search?part=snippet,id&' + queryURL + search + '&maxResults=50&pageToken=' + token + '&key=AIzaSyC9j5myBqjEoydyrootsBO1iqe9-dSpPaA')
         .then(function(videos) {
           videos.items.forEach(function(video) {
             if (video.id.kind === 'youtube#video') {
@@ -109,11 +114,6 @@
 
     function findVideos() {
       let videos = document.querySelectorAll('.video__wrapper');
-      let footer = document.querySelector('.footer');
-      
-      if (videos.length >= 48) {
-        footer.classList.add('footer--visible');
-      }
       
       for (var i = 0; i < videos.length; i++) {
         setupVideo(videos[i]);
