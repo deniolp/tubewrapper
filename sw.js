@@ -27,12 +27,12 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     fetch(event.request)
       .then(function(response) {
-        if (response.ok) {
-          console.log(response);
+        if (response.status === 200) {
           return response;
-        }
-        if (isImage(event.request)) {
-          return fetch('media/broken.png');
+        } else {
+          if (isImage(event.request)) {
+            return caches.match('media/broken.png');
+          }
         }
       })
       .catch((error) => {
