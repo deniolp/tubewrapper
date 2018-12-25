@@ -1,9 +1,14 @@
 'use strict';
 
 (function() {
+  let path = '/myServiceWorker/';
+  if (location.host === 'localhost:3000') {
+    path = '/';
+  }
+  
   let CACHE_NAME = 'my-site-cache';
   let urlsToCache = [
-    'media/broken.png'
+    path + 'media/broken.png'
   ];
 
   self.addEventListener('install', (event) => {
