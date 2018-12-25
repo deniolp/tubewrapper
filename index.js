@@ -187,6 +187,20 @@
     let tokenNext = '';
     let query = '';
     let search = '';
+    let path = '/myWebComp/sw.js';
+    if (location.host === 'localhost:3000') {
+      path = '/sw.js';
+    }
+    
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register(path)
+        .then(function (registration) {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
 
     shadows.forEach(function(shadow) {
       buttons.push(shadow.shadowRoot.querySelector('button'));
@@ -224,14 +238,4 @@
       fillVideoList(query, search, tokenNext);
     });
   }, 300);
-  
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/myWebComp/sw.js')
-      .then(function (registration) {
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
 })();

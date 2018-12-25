@@ -1,28 +1,25 @@
 'use strict';
 
-let CACHE_NAME = 'my-site-cache';
-let urlsToCache = [
-  'media/broken.png'
-];
+(function() {
+  let CACHE_NAME = 'my-site-cache';
+  let urlsToCache = [
+    'media/broken.png'
+  ];
 
-self.addEventListener('install', (event) => {
-  event.waitUntil(
-      caches.open(CACHE_NAME)
-      .then((cache) => {
-          return cache.addAll(urlsToCache);
-      })
-  );
-});
+  self.addEventListener('install', (event) => {
+    event.waitUntil(
+        caches.open(CACHE_NAME)
+        .then((cache) => {
+            return cache.addAll(urlsToCache);
+        })
+    );
+  });
 
-self.addEventListener('activate', (event) => {
-  console.log('Activated!');
-});
-
-function isImage(fetchRequest) {
-    return fetchRequest.method === 'GET'
-           && fetchRequest.destination === 'image';
-}
-
-self.addEventListener('fetch', (event) => {
-  console.log('Fetch event!')
-});
+  self.addEventListener('activate', (event) => {
+    console.log('Activated!');
+  });
+  
+  self.addEventListener('fetch', (event) => {
+    console.log('Fetch event!')
+  });
+})();
