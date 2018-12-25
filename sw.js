@@ -1,3 +1,4 @@
+
 'use strict';
 
 let CACHE_NAME = 'my-site-cache';
@@ -18,11 +19,6 @@ self.addEventListener('activate', (event) => {
   console.log('Activated!');
 });
 
-function isImage(fetchRequest) {
-    return fetchRequest.method === 'GET'
-           && fetchRequest.destination === 'image';
-}
-
 self.addEventListener('fetch', (event) => {
-  console.log('Fetch event!')
+  console.log('Fetch event!');
 });
