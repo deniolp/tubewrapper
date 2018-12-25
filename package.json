@@ -1,0 +1,27 @@
+{
+  "name": "mywebcomp",
+  "version": "1.0.0",
+  "description": "Learning Web Components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deniolp/myWebComp.git"
+  },
+  "keywords": [
+    "webcomponents"
+  ],
+  "author": "Denis Popov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deniolp/myWebComp/issues"
+  },
+  "homepage": "https://github.com/deniolp/myWebComp#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0"
+  }
+}
