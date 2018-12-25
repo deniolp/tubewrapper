@@ -17,9 +17,7 @@
       let element = template.cloneNode(true);
       element.querySelector('.video__header').innerText = object.snippet.title;
       element.querySelector('.video__link').href = 'https://www.youtube.com/watch?v=' + object.id.videoId;
-      element.querySelector('.video__picture').srcset = 'https://i.ytimg.com/vi_webp/' + object.id.videoId + '/hqdefault.webp';
       element.querySelector('.video__image').src = object.snippet.thumbnails.high.url;
-      console.log(element.querySelector('.video__image').src);
       element.querySelector('.video__image').alt = object.snippet.title;
 
       return element;
