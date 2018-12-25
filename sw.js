@@ -1,14 +1,9 @@
 'use strict';
 
 (function() {
-  let path = '/myWebComp/';
-  if (location.host === 'localhost:3000') {
-    path = '/';
-  }
-  
   let CACHE_NAME = 'my-site-cache';
   let urlsToCache = [
-    path + 'media/broken.png'
+    'media/broken.png'
   ];
 
   self.addEventListener('install', (event) => {
