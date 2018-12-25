@@ -1,3 +1,4 @@
+
 'use strict';
 
 (function() {
@@ -14,12 +15,12 @@
         })
     );
   });
-
+  
   self.addEventListener('activate', (event) => {
     console.log('Activated!');
   });
-  
+
   self.addEventListener('fetch', (event) => {
-    console.log('Fetch event!')
+    console.log('Fetch event!');
   });
 })();
