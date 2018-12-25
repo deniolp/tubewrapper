@@ -150,7 +150,7 @@
     }
 
     function parseURL(data) {
-      let regexp = /https:\/\/img\.youtube\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
+      let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault\.jpg/i;
       let url = data.src;
       let match = url.match(regexp);
 
