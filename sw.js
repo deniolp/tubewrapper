@@ -32,13 +32,10 @@ self.addEventListener('fetch', (event) => {
           return response;
         }
         if (isImage(event.request)) {
-          return caches.match('broken.png')
+          return caches.match('media/broken.png')
             .then((response) => {
-              console.log('Online, but I took image from the cache.')
+              console.log(response);
               return response;
-            })
-            .catch((error) => {
-              console.log(error);
             })
         }
       })
