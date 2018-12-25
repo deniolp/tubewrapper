@@ -19,26 +19,7 @@
     console.log('Activated!');
   });
 
-  function isImage(fetchRequest) {
-      return fetchRequest.method === 'GET'
-             && fetchRequest.destination === 'image';
-  }
-
   self.addEventListener('fetch', (event) => {
-    event.respondWith(
-      fetch(event.request)
-        .then(function(response) {
-          if (response.status === 200) {
-            return response;
-          } else {
-            if (isImage(event.request)) {
-              return caches.match('media/broken.png');
-            }
-          }
-        })
-        .catch((error) => {
-          console.log(error);
-        })
-    )
+    console.log('Fetch event!')
   });
 })();
