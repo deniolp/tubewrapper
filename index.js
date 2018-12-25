@@ -17,8 +17,9 @@
       let element = template.cloneNode(true);
       element.querySelector('.video__header').innerText = object.snippet.title;
       element.querySelector('.video__link').href = 'https://www.youtube.com/watch?v=' + object.id.videoId;
-      element.querySelector('.video__picture').srcset = 'https://img.youtube.com/vi_webp/' + object.id.videoId + '/maxresdefault.webp';
-      element.querySelector('.video__image').src = 'https://img.youtube.com/vi/' + object.id.videoId + '/maxresdefault.jpg';
+      element.querySelector('.video__picture').srcset = 'https://i.ytimg.com/vi_webp/' + object.id.videoId + '/hqdefault.webp';
+      element.querySelector('.video__image').src = object.snippet.thumbnails.high.url;
+      console.log(element.querySelector('.video__image').src);
       element.querySelector('.video__image').alt = object.snippet.title;
 
       return element;
@@ -151,7 +152,7 @@
     }
 
     function parseURL(data) {
-      let regexp = /https:\/\/img\.youtube\.com\/vi\/([a-zA-Z0-9_-]+)\/maxresdefault\.jpg/i;
+      let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault\.jpg/i;
       let url = data.src;
       let match = url.match(regexp);
 
