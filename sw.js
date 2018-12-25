@@ -1,7 +1,7 @@
 'use strict';
 
 (function() {
-  let path = '/myServiceWorker/';
+  let path = '/myWebComp/';
   if (location.host === 'localhost:3000') {
     path = '/';
   }
