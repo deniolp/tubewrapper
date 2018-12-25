@@ -93,7 +93,8 @@
                   buttonForPrev.classList.add('footer__button--disabled');
                 }
                 videoList.appendChild(fragment);
-                findVideos();
+                console.log(videos);
+                findVideos(videos);
               })
               .catch(error => console.log(error));
           })
@@ -118,24 +119,24 @@
             buttonForPrev.classList.add('footer__button--disabled');
           }
           videoList.appendChild(fragment);
-          findVideos();
+          findVideos(videos.items);
         })
         .catch(error => console.log(error));
     }
 
-    function findVideos() {
+    function findVideos(videolist) {
       let videos = document.querySelectorAll('.video__wrapper');
       
       for (var i = 0; i < videos.length; i++) {
-        setupVideo(videos[i]);
+        let id = videolist[i].id.videoId;
+        setupVideo(videos[i], id);
       }
     }
 
-    function setupVideo(video) {
+    function setupVideo(video, id) {
       let link = video.querySelector('.video__link');
       let image = video.querySelector('.video__image');
       let button = video.querySelector('.video__button');
-      let id = parseURL(image);
 
       video.addEventListener('click', function() {
         let iframe = createIframe(id);
@@ -147,14 +148,6 @@
 
       link.removeAttribute('href');
       video.classList.add('video-wrapper--enabled');
-    }
-
-    function parseURL(data) {
-      let regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault\.jpg/i;
-      let url = data.src;
-      let match = url.match(regexp);
-
-      return match[1];
     }
 
     function createIframe(id) {
