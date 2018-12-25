@@ -18,6 +18,25 @@ self.addEventListener('activate', (event) => {
   console.log('Activated!');
 });
 
+function isImage(fetchRequest) {
+    return fetchRequest.method === 'GET'
+           && fetchRequest.destination === 'image';
+}
+
 self.addEventListener('fetch', (event) => {
-  console.log('Fetch event!');
+  event.respondWith(
+    fetch(event.request)
+      .then(function(response) {
+        if (response.ok) {
+          console.log(response);
+          return response;
+        }
+        if (isImage(event.request)) {
+          return caches.match('broken.png');
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+  )
 });
