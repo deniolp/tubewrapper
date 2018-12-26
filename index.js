@@ -93,8 +93,7 @@
                   buttonForPrev.classList.add('footer__button--disabled');
                 }
                 videoList.appendChild(fragment);
-                console.log(videos);
-                findVideos(videos);
+                findVideos(videos.items);
               })
               .catch(error => console.log(error));
           })
