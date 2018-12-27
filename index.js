@@ -137,14 +137,12 @@
       let url = data.src;
       let regexp1 = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault\.jpg/i;
       let regexp2 = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault([a-zA-Z0-9_-]+)\.jpg/i;
+      
       if (url.match(regexp1)) {
         match = url.match(regexp1);
-        console.log(match);
       } else {
         match = url.match(regexp2);
-        console.log(match);
       }
-      
       return match[1];
     }
 
