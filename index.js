@@ -31,7 +31,6 @@
         xhr.addEventListener('load', function() {
           if (xhr.status === 200) {
             let json = xhr.response;
-            let footer = document.querySelector('.footer');
             
             if (json.pageInfo.totalResults >= 50) {
               footer.classList.add('footer--visible');
@@ -58,6 +57,7 @@
     }
 
     function fillVideoList(query, search, token) {
+      footer.classList.remove('footer--visible');
       if (token === undefined) {
         token = '';
       }
@@ -84,6 +84,7 @@
                     addVideoToList(video);
                   }
                 });
+                
                 tokenNext = videos.nextPageToken;
                 tokenPrev = videos.prevPageToken;
                 if (tokenPrev !== undefined) {
@@ -93,7 +94,7 @@
                   buttonForPrev.classList.add('footer__button--disabled');
                 }
                 videoList.appendChild(fragment);
-                findVideos(videos.items);
+                findVideos();
               })
               .catch(error => console.log(error));
           })
@@ -118,24 +119,32 @@
             buttonForPrev.classList.add('footer__button--disabled');
           }
           videoList.appendChild(fragment);
-          findVideos(videos.items);
+          findVideos();
         })
         .catch(error => console.log(error));
     }
 
-    function findVideos(videolist) {
+    function findVideos() {
       let videos = document.querySelectorAll('.video__wrapper');
       
       for (var i = 0; i < videos.length; i++) {
-        let id = videolist[i].id.videoId;
-        setupVideo(videos[i], id);
+        setupVideo(videos[i]);
       }
     }
+    
+    function parseVideo(data) {
+      let url = data.src;
+      let regexp =  /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault\.jpg/i;
+      let match = url.match(regexp);
+      
+      return match[1];
+    }
 
-    function setupVideo(video, id) {
+    function setupVideo(video) {
       let link = video.querySelector('.video__link');
       let image = video.querySelector('.video__image');
       let button = video.querySelector('.video__button');
+      let id = parseVideo(image);
 
       video.addEventListener('click', function() {
         let iframe = createIframe(id);
@@ -168,6 +177,7 @@
 
     let videoList = document.querySelector('.videos');
     let shadows = document.querySelectorAll('query-element');
+    let footer = document.querySelector('.footer');
     let buttonForPrev = document.querySelector('.footer__button--prev');
     let buttonForNext = document.querySelector('.footer__button--next');
     let buttons = [];
@@ -198,16 +208,14 @@
     });
 
     inputs.forEach(function(input) {
-      input.addEventListener('focus', function() {
-        input.addEventListener('keydown', function(evt) {
-          if (evt.keyCode === KEYCODE_ENTER) {
-            search = input.value;
-            if (search !== '') {
-              query = buttons[inputs.indexOf(input)].id;
-              fillVideoList(query, search);
-            }
+      input.addEventListener('keydown', function(evt) {
+        if (evt.keyCode === KEYCODE_ENTER) {
+          search = input.value;
+          if (search !== '') {
+            query = buttons[inputs.indexOf(input)].id;
+            fillVideoList(query, search);
           }
-        });
+        }
       });
     });
 
