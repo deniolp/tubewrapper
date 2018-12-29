@@ -4,7 +4,8 @@
 (function () {
   let CACHE_NAME = 'my-site-cache';
   let urlsToCache = [
-    'offline.html'
+    'offline.html',
+    'favicon-offline.ico'
   ];
 
     self.addEventListener('install', (event) => {
@@ -34,7 +35,6 @@
               })
               .catch(() => {
                 if (isOffline(event.request)) {
-                  console.log(event.request);
                   return cache.match('offline.html');
                 }
               })
