@@ -4,7 +4,7 @@
 (function () {
   let CACHE_NAME = 'my-site-cache';
   let urlsToCache = [
-    'media/broken.png'
+    'offline.html'
   ];
 
     self.addEventListener('install', (event) => {
@@ -19,8 +19,26 @@
     self.addEventListener('activate', (event) => {
       console.log('Activated!');
     });
+    
+    function isOffline(request) {
+      return request.method === 'GET' && request.destination === 'document';
+    }
 
     self.addEventListener('fetch', (event) => {
-      console.log('Fetch event!');
+      event.respondWith(
+        caches.open(CACHE_NAME)
+          .then(function(cache) {
+            return fetch(event.request)
+              .then(function(response) {
+                return response;
+              })
+              .catch(() => {
+                if (isOffline(event.request)) {
+                  console.log(event.request);
+                  return cache.match('offline.html');
+                }
+              })
+          })
+      )
     });
 })();
