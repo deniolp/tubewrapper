@@ -21,14 +21,14 @@
           border: 1px solid #dfe1e5;
           box-shadow: none;
           font-size: 16px;
-          color: #fff;
+          color: black;
           margin-right: 10px;
           padding-left: 20px;
           padding-right: 20px;
           border-radius: 2px;
           outline: none;
           box-sizing: border-box;
-          background-color: #794545;
+          background-color: #edf1f7b3;
         }
         
         @media (max-width: 440px) {
@@ -45,13 +45,13 @@
           padding: 7px;
           border: 1px solid #dfe1e5;
           box-shadow: none;
-          color: #fff;
+          color: black;
           font-size: 16px;
           max-width: 65px;
           height: 44px;
           border-radius: 2px;
           outline: none;
-          background-color: #794545;
+          background-color: #edf1f7b3;
           box-sizing: border-box;
         }
         

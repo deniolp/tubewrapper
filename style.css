@@ -9,22 +9,21 @@ html {
 body {
   margin: 0;
   padding: 10px;
-  background-color: #ff6347e6;
+  background-color: #ffffff;
 }
 
 .nav-bar {
   display: flex;
   justify-content: space-between;
-  background-color: #f97259b3;
+  background-color: #edf1f7b3;
   min-height: 100px;
   padding: 30px 60px 30px 30px;
   margin-bottom: 20px;
-  box-shadow: 0 0 1px rgba(146, 140, 140, 140.5);
-  border-radius: 2px;
+  border-radius: .5rem;
 }
 
 .videos {
-  background-color: #ff7259;
+  background-color: #ffffff;
   margin: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -50,8 +49,8 @@ body {
 }
 
 .video {
-  background-color: #e3d9d81a;
-  box-shadow: 0 0 20px rgb(121, 69, 69);
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgb(166, 190, 210);
 }
 
 .video:hover {
@@ -138,7 +137,7 @@ body {
   min-height: 40px;
   margin-top: 20px;
   padding: 10px;
-  background-color: #f97259b3;
+  background-color: #ffffff;
   box-shadow: 0 0 1px rgba(146, 140, 140, 140.5);
 }
 
@@ -151,7 +150,7 @@ body {
   height: 20px;
   width: 30px;
   border: 1px solid #dfe1e5;
-  background-color: #794545;
+  background-color: #4b6777;
   border-radius: 2px;
   outline: none;
   box-sizing: border-box;
