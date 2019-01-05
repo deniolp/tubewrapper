@@ -2,7 +2,7 @@
 'use strict';
 
 (function () {
-  let CACHE_NAME = 'my-site-cache';
+  let CACHE_NAME = 'my-cache';
   let urlsToCache = [
     'offline.html',
     'favicon-offline.ico'
