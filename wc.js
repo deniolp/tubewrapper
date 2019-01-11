@@ -38,7 +38,7 @@
         }
         
         input:hover, input:focus, button:hover, button:focus {
-          box-shadow: 0 1px 20px 0 rgba(32,33,36,0.28);
+          box-shadow: 0 1px 20px 0 rgba(1, 3, 11, 0.95);
           border-color: rgba(223,225,229,0);
         }
         button {
