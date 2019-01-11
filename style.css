@@ -15,7 +15,7 @@ body {
 .nav-bar {
   display: flex;
   justify-content: space-between;
-  background-color: #edf1f7b3;
+  background-color: #5a7191;
   min-height: 100px;
   padding: 30px 60px 30px 30px;
   margin-bottom: 20px;
