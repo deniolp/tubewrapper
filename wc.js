@@ -1,18 +1,18 @@
 'use stricts';
 
-(function() {
+(function () {
   let texts = [];
   let i = 0;
-  
+
   class QueryElement extends HTMLElement {
     constructor() {
       super();
 
       let shadow = this.attachShadow({
-        mode: 'open'
+        mode: `open`
       });
 
-      let template = document.createElement('template');
+      let template = document.createElement(`template`);
       template.innerHTML = `
         <style>
         input {
@@ -85,11 +85,11 @@
 
       shadow.appendChild(template.content.cloneNode(true));
 
-      let button = shadow.querySelector('button');
-      let input = shadow.querySelector('input');
-      let type = this.getAttribute('type');
-      let placeHolder = this.getAttribute('placeholder');
-      texts.push(this.getAttribute('text'));
+      let button = shadow.querySelector(`button`);
+      let input = shadow.querySelector(`input`);
+      let type = this.getAttribute(`type`);
+      let placeHolder = this.getAttribute(`placeholder`);
+      texts.push(this.getAttribute(`text`));
       input.placeholder = placeHolder;
       button.id = type;
     }
@@ -100,22 +100,22 @@
       super();
 
       let shadow = this.attachShadow({
-        mode: 'open'
+        mode: `open`
       });
 
-      let wrapper = document.createElement('span');
-      let icon = document.createElement('span');
-      let popup = document.createElement('span');
-      let img = document.createElement('img');
-      let style = document.createElement('style');
+      let wrapper = document.createElement(`span`);
+      let icon = document.createElement(`span`);
+      let popup = document.createElement(`span`);
+      let img = document.createElement(`img`);
+      let style = document.createElement(`style`);
 
-      wrapper.className = 'wrapper';
-      icon.className = 'icon';
-      icon.setAttribute('tabindex', 0);
-      popup.className = 'popup';
+      wrapper.className = `wrapper`;
+      icon.className = `icon`;
+      icon.setAttribute(`tabindex`, 0);
+      popup.className = `popup`;
       popup.textContent = texts[i];
       i++;
-      img.src = 'media/info.png';
+      img.src = `media/info.png`;
       icon.appendChild(img);
 
       style.textContent = `
@@ -169,7 +169,7 @@
         .icon:hover + .popup, .icon:focus + .popup {
           display: inline-block;
         }
-      `
+      `;
 
       shadow.appendChild(style);
       shadow.appendChild(wrapper);
@@ -178,6 +178,6 @@
     }
   }
 
-  customElements.define('query-element', QueryElement);
-  customElements.define('popup-info', PopupInfo);
+  customElements.define(`query-element`, QueryElement);
+  customElements.define(`popup-info`, PopupInfo);
 })();
