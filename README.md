@@ -16,8 +16,6 @@ _Some goals that was defined regarding this project:_
 
 #### _Screenshot_ =>
 
-{
-  <img width="500" src="https://user-images.githubusercontent.com/30692310/51133283-a285d280-1845-11e9-8314-2891ebeed538.png">
-}
+<img width="500" src="https://user-images.githubusercontent.com/30692310/51133283-a285d280-1845-11e9-8314-2891ebeed538.png">
 
 _I'd be very glad to receive any advice_
