@@ -13,6 +13,7 @@ _Some goals that was defined regarding this project:_
 * To understand how to use Custom Elements
 * To understand how to use tag Template
 * To understand how to use Shadow DOM
+* To learn Service Workers
 
 #### _Screenshot_ =>
 
