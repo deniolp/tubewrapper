@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c2abaa1f-5a4a-4faf-bfbd-09bcb1814193/deploy-status)](https://yt-wrapper.netlify.com/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c2abaa1f-5a4a-4faf-bfbd-09bcb1814193/deploy-status)](https://tubewrapper.netlify.com/)
 # myWebComp
 ## The project for learning Web Components and Google Youtube API
 ### This private project made for learning Web Components and Google Youtube API, i.e. that is a wrapper for API with simple composition.
