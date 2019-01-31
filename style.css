@@ -16,7 +16,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   grid-template-rows: auto auto auto 220px;
-  background-color: #bcd0ec;
+  background-color: #11eea44b;
   padding: 30px 30px 20px 30px;
   margin-bottom: 20px;
   border-radius: .5rem;
