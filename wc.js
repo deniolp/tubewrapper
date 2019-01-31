@@ -41,6 +41,7 @@
           box-shadow: 0 1px 20px 0 rgba(1, 3, 11, 0.95);
           border-color: rgba(223,225,229,0);
         }
+        
         button {
           padding: 7px;
           border: 1px solid #dfe1e5;
