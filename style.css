@@ -15,10 +15,28 @@ body {
 .nav-bar {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-rows: auto auto auto 200px;
   background-color: #bcd0ec;
   padding: 30px 30px 20px 30px;
   margin-bottom: 20px;
   border-radius: .5rem;
+}
+
+.nav-bar__form {
+  grid-column-start: -2;
+  grid-column-end: -1;
+  grid-row-start: -2;
+  grid-row-end: -1;
+  padding: 20px;
+}
+
+.form {
+  display: grid;
+  max-width: 60%;
+}
+
+.form input[type="submit"] {
+  width: 90px;
 }
 
 .videos {
