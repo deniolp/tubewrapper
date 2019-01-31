@@ -22,6 +22,7 @@
           font-size: 16px;
           color: black;
           margin-right: 10px;
+          margin-bottom: 10px;
           padding-left: 20px;
           padding-right: 20px;
           border-radius: 2px;
@@ -68,10 +69,6 @@
         @media (max-width: 620px) {
           .nav-bar__item {
             flex-direction: column;
-          }
-          
-          input {
-            margin-bottom: 10px;
           }
         }
 
