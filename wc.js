@@ -16,7 +16,6 @@
       template.innerHTML = `
         <style>
         input {
-          width: 270px;
           height: 44px;
           border: 1px solid #dfe1e5;
           box-shadow: none;
@@ -75,6 +74,12 @@
             margin-bottom: 10px;
           }
         }
+
+        @media (max-width: 440px) {
+          .nav-bar__item {
+            width: 250px;
+          }
+        }
         </style>
         <div class="nav-bar__item">
           <input type="text" name="search" value="" placeholder="" text="">
@@ -125,7 +130,7 @@
         
         .popup {
           font-size: 15px;
-          width: 200px;
+          width: 150px;
           display: none;
           border: solid 1px black;
           padding: 8px;
@@ -142,12 +147,6 @@
           position: absolute;
           top: 20px;
           left: 5px;
-        }
-        
-        @media (max-width: 835px) {
-          .popup {
-            right: -250px;
-          }
         }
         
         @media (max-width: 620px) {
