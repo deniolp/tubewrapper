@@ -15,7 +15,7 @@ body {
 .nav-bar {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  background-color: #5a7191;
+  background-color: #bcd0ec;
   padding: 30px;
   margin-bottom: 20px;
   border-radius: .5rem;
