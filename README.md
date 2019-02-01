@@ -22,4 +22,4 @@ _Some goals that was defined regarding this project:_
 <img width="500" src="https://user-images.githubusercontent.com/30692310/51133283-a285d280-1845-11e9-8314-2891ebeed538.png">
 
 _I'd be very glad to receive any advice_
-* You can give me advice by means of the version of my site with Netlify form -- https://form--tubewrapper.netlify.com/
+* You can give me advice by means of the form in the site (Netlify form).
