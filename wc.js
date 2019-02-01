@@ -81,7 +81,7 @@
         </style>
         <div class="nav-bar__item">
           <input type="text" name="search" value="" placeholder="" text="">
-          <button type="button" id="" name="button">Поиск</button>
+          <button type="button" id="" name="button">Search</button>
           <popup-info></popup-info>
         </div>
       `;

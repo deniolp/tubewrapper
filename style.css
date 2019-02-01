@@ -1,5 +1,7 @@
 html {
   box-sizing: border-box;
+  padding: 5px;
+  background-color: rgb(188, 208, 247);
 }
 
 *, *:before, *:after {
@@ -8,7 +10,6 @@ html {
 
 body {
   margin: 0;
-  padding: 10px;
   background-color: #ffffff;
 }
 
@@ -16,10 +17,8 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   grid-template-rows: auto auto auto 220px;
-  background-color: #11eea44b;
+  background-color: #f3f170ce;
   padding: 30px 30px 20px 30px;
-  margin-bottom: 20px;
-  border-radius: .5rem;
 }
 
 .nav-bar__form {
@@ -33,7 +32,7 @@ body {
 .form {
   display: grid;
   grid-gap: 5px;
-  max-width: 60%;
+  max-width: 70%;
   font-family: 'PT Sans', sans-serif;
 }
 
