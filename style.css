@@ -16,8 +16,8 @@ body {
 .nav {
   display: grid;
   width: 100%;
-  grid-template-columns: 20px repeat(4, 130px) 10px calc(100% / 5) auto;
-  grid-template-rows: 20px repeat(4, 100px) 20px;
+  grid-template-columns: 20px repeat(4, calc(100% / 10)) 10px calc(100% / 4) auto;
+  grid-template-rows: 20px repeat(3, 100px) 150px 20px;
 }
 
 .image {
@@ -64,27 +64,46 @@ aside {
   grid-row: 2 / 5;
 }
 
-.nav-bar {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  grid-template-rows: auto auto auto 220px;
-  background-color: #f3f170ce;
-  padding: 30px 30px 20px 30px;
+.query1 {
+  grid-column: 8 / 9;
+  grid-row: 2 / 3;
 }
 
-.nav-bar__form {
-  grid-column-start: -2;
-  grid-column-end: -1;
-  grid-row-start: -2;
-  grid-row-end: -1;
-  padding: 15px 15px 15px 0px;
+.query2 {
+  grid-column: 8 / 9;
+  grid-row: 3 / 4;
+}
+
+.query3 {
+  grid-column: 8 / 9;
+  grid-row: 4 / 5;
+}
+
+.nav__form {
+  display: contents;
 }
 
 .form {
-  display: grid;
-  grid-gap: 5px;
-  max-width: 70%;
+  display: contents;
   font-family: 'PT Sans', sans-serif;
+}
+
+.form textarea {
+  grid-column: 5 / 8;
+  grid-row: 5 / 6;
+}
+
+.form__inputs {
+  grid-column: 8 / 9;
+  grid-row: 5 / 6;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+#email {
+  width: 50%;
+  margin-bottom: 20px;
 }
 
 .form input,
@@ -93,7 +112,7 @@ aside {
   font-size: 16px;
   color: black;
   outline: none;
-  background-color: #edf1f7b3;
+  background-color: #fff;
   padding: 5px;
   font-family: 'PT Sans', sans-serif;
 }

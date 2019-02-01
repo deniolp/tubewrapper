@@ -20,18 +20,18 @@
     <aside>
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam ipsum totam incidunt vel deserunt blanditiis consequuntur velit doloribus vero, quae voluptates adipisci placeat minima praesentium veritatis quidem? Fuga, saepe ipsum!
     </aside>
-  </div>
-  <div class="nav-bar">
-    <query-element type="search" placeholder="Youtube search request" text="Please, write down the search request."></query-element>
-    <query-element type="name" placeholder="Channel's name" text="Please, write down channel's name."></query-element>
-    <query-element type="channel" placeholder="Channel's id" text="Please, write down the channel's id. You can find it in the browser's search bar after the '/'."></query-element>
-    <div class="nav-bar__form">
-      <form name="counsel-collection-form" class="form" netlify>
-        <textarea name="counsel" id="counsel" cols="25" rows="4" placeholder="Waiting for advice about WebComponents, Service Workers, Grids, Netlify or Youtube API." required></textarea>
-        <label for="email">Your email:</label>
-        <input type="email" id="email" name="email" required>
-        <input type="submit" value="Submit">
-      </form>
+    <query-element type="search" placeholder="Youtube search request" text="Please, write down the search request." class="query1"></query-element>
+    <query-element type="name" placeholder="Channel's name" text="Please, write down channel's name." class="query2"></query-element>
+    <query-element type="channel" placeholder="Channel's id" text="Please, write down the channel's id. You can find it in the browser's search bar after the '/'." class="query3"></query-element>
+    <div class="nav__form">
+        <form name="counsel-collection-form" class="form" netlify>
+          <textarea name="counsel" id="counsel" cols="25" rows="4" placeholder="Waiting for advice about WebComponents, Service Workers, Grids, Netlify or Youtube API." required></textarea>
+          <div class="form__inputs">
+              <label for="email">Your email:</label>
+              <input type="email" id="email" name="email" required>
+              <input type="submit" value="Submit">
+          </div>
+        </form>
     </div>
   </div>
   <div class="videos"></div>
