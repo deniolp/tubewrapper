@@ -20,6 +20,13 @@ body {
   grid-template-rows: 20px repeat(3, 100px) 150px 20px;
 }
 
+@media (max-width: 620px) {
+  .nav {
+    grid-template-columns: 20px repeat(4, calc(100% / 10)) 10px calc(100% / 4) auto;
+    grid-template-rows: 20px repeat(3, 100px) 150px 20px;
+  }
+}
+
 .image {
   background-size: cover;
 }
@@ -62,6 +69,12 @@ body {
 aside {
   grid-column: 7 / 8;
   grid-row: 2 / 5;
+  padding: 15px;
+  font-family: 'PT Sans', sans-serif;
+}
+
+query-element {
+  padding: 20px;
 }
 
 .query1 {
@@ -89,7 +102,7 @@ aside {
 }
 
 .form textarea {
-  grid-column: 5 / 8;
+  grid-column: 7 / 8;
   grid-row: 5 / 6;
 }
 
@@ -129,7 +142,7 @@ aside {
 
 .form input[type="submit"] {
   width: 110px;
-  height: 30px;;
+  height: 30px;
 }
 
 .videos {
@@ -149,12 +162,6 @@ aside {
 @media (max-width: 620px) {
   .videos {
     grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 440px) {
-  .nav-bar {
-    grid-template-columns: repeat(auto-fit, 250px);
   }
 }
 

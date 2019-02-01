@@ -16,25 +16,17 @@
       template.innerHTML = `
         <style>
         input {
-          height: 44px;
+          width: 50%;
           border: 1px solid #dfe1e5;
           box-shadow: none;
           font-size: 16px;
           color: black;
-          margin-bottom: 10px;
-          margin-left: 20px;
-          padding-left: 20px;
-          padding-right: 20px;
+          margin-bottom: 5px;
+          padding: 5px;
           border-radius: 2px;
           outline: none;
           box-sizing: border-box;
           background-color: #fff;
-        }
-        
-        @media (max-width: 440px) {
-          input {
-            
-          }
         }
         
         input:hover, input:focus, button:hover, button:focus {
@@ -43,46 +35,27 @@
         }
         
         button {
-          padding: 7px;
+          height: 30px;
+          padding: 5px;
           border: 1px solid #dfe1e5;
           box-shadow: none;
           color: black;
           font-size: 16px;
           max-width: 65px;
-          height: 44px;
           border-radius: 2px;
           outline: none;
           background-color: #fff;
           box-sizing: border-box;
-          margin-left: 20px;
         }
         
         .nav-bar__item {
           display: grid;
-          width: 30%;
-        }
-        
-        @media (max-width: 1145px) {
-          .nav-bar__item {
-            
-          }
-        }
-        
-        @media (max-width: 620px) {
-          .nav-bar__item {
-            
-          }
-        }
-
-        @media (max-width: 440px) {
-          .nav-bar__item {
-            
-          }
+          width: 100%;
         }
         </style>
         <div class="nav-bar__item">
           <input type="text" name="search" value="" placeholder="" text="">
-          <button type="button" id="" name="button">Search</button>
+          <button type="button" id="" name="button">click</button>
           <popup-info></popup-info>
         </div>
       `;
@@ -137,15 +110,15 @@
           border-radius: 10px;
           transition: 0.6s all;
           position: absolute;
-          top: 0px;
-          left: 0px;
+          bottom: 0px;
+          left: -100px;
           z-index: 4; 
         }
         
         .icon {
           position: absolute;
-          bottom: 0px;
-          left: 90px;
+          bottom: 5px;
+          left: 70px;
         }
         
         @media (max-width: 620px) {
