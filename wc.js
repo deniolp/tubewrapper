@@ -118,7 +118,7 @@
       popup.className = `popup`;
       popup.textContent = texts[i];
       i++;
-      img.src = `media/info.png`;
+      img.src = `media/outline_info_black_18dp.png`;
       icon.appendChild(img);
 
       style.textContent = `
