@@ -81,7 +81,7 @@
         </style>
         <div class="nav-bar__item">
           <input type="text" name="search" value="" placeholder="" text="">
-          <button type="button" id="" name="button">Поиск</button>
+          <button type="button" id="" name="button">Search</button>
           <popup-info></popup-info>
         </div>
       `;
@@ -118,7 +118,7 @@
       popup.className = `popup`;
       popup.textContent = texts[i];
       i++;
-      img.src = `media/info.png`;
+      img.src = `media/outline_info_black_18dp.png`;
       icon.appendChild(img);
 
       style.textContent = `
