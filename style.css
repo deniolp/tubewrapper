@@ -80,6 +80,7 @@ body {
 .video-icon {
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 80px;
   background-image: url("media/baseline-videocam-24px.svg");
   grid-area: video-icon;
 }
@@ -88,6 +89,10 @@ aside {
   grid-area: text;
   padding: 15px;
   font-family: 'PT Sans', sans-serif;
+  line-height: 1.4em;
+  font-size: 17px;
+  font-weight: 900;
+  color: #263346e6;
 }
 
 query-element {
@@ -108,6 +113,10 @@ query-element {
 
 .nav__form {
   display: contents;
+}
+
+.nav__form label {
+  color: #263346e6;
 }
 
 .form {
@@ -133,9 +142,9 @@ query-element {
 
 .form input,
 .form textarea {
-  border: 1px solid #dfe1e5;
+  border: 1px solid #263346e6;
   font-size: 16px;
-  color: black;
+  color: #263346e6;
   outline: none;
   background-color: #fff;
   padding: 5px;
@@ -278,7 +287,7 @@ query-element {
 .footer__button {
   height: 20px;
   width: 30px;
-  border: 1px solid #dfe1e5;
+  border: 1px solid #263346e6;
   background-color: #4b6777;
   border-radius: 2px;
   outline: none;

@@ -17,10 +17,10 @@
         <style>
         input {
           width: 100%;
-          border: 1px solid #dfe1e5;
+          border: 1px solid #263346e6;
           box-shadow: none;
           font-size: 16px;
-          color: black;
+          color: #263346e6;
           margin-bottom: 5px;
           padding: 5px;
           border-radius: 2px;
@@ -37,9 +37,9 @@
         button {
           height: 30px;
           padding: 5px;
-          border: 1px solid #dfe1e5;
+          border: 1px solid #263346e6;
           box-shadow: none;
-          color: black;
+          color: #263346e6;
           font-size: 16px;
           max-width: 65px;
           border-radius: 2px;
@@ -102,9 +102,10 @@
         
         .popup {
           font-size: 15px;
+          color: #263346e6;
           width: 150px;
           display: none;
-          border: solid 1px black;
+          border: solid 1px #263346e6;
           padding: 8px;
           background: #ffffff;
           border-radius: 10px;
