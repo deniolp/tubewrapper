@@ -16,12 +16,11 @@
       template.innerHTML = `
         <style>
         input {
-          width: 100%;
+          width: 70%;
           border: 1px solid #263346e6;
           box-shadow: none;
           font-size: 16px;
           color: #263346e6;
-          margin-bottom: 5px;
           padding: 5px;
           border-radius: 2px;
           outline: none;
@@ -35,7 +34,8 @@
         }
         
         button {
-          height: 30px;
+          width: 20%;
+          min-width: 45px;
           padding: 5px;
           border: 1px solid #263346e6;
           box-shadow: none;
@@ -49,7 +49,8 @@
         }
         
         .nav-bar__item {
-          display: grid;
+          display: flex;
+          justify-content: space-between;
           width: 100%;
         }
         </style>
@@ -102,6 +103,7 @@
         
         .popup {
           font-size: 15px;
+          font-family: 'PT Sans', sans-serif;
           color: #263346e6;
           width: 150px;
           display: none;
@@ -111,15 +113,15 @@
           border-radius: 10px;
           transition: 0.6s all;
           position: absolute;
-          bottom: 0px;
-          left: -100px;
+          top: 0px;
+          left: 20px;
           z-index: 4; 
         }
         
         .icon {
           position: absolute;
-          bottom: 5px;
-          left: 70px;
+          top: 6px;
+          right: -20px;
         }
         
         @media (max-width: 620px) {

@@ -17,16 +17,16 @@ body {
   display: grid;
   grid-gap: 1px;
   width: 100%;
-  height: 90vh;
-  grid-template-columns: 20px repeat(4, calc(100% / 10)) 10px calc(100% / 4) auto;
-  grid-template-rows: 20px repeat(3, 130px) 170px 20px;
+  height: 95vh;
+  grid-template-columns: 20px repeat(4, calc(100% / 10)) calc(100% / 4) auto;
+  grid-template-rows: 20px repeat(3, 150px) 175px 20px;
   grid-template-areas:
-    ". . . . . . . ."
-    ". image1 image1 image2 image2 query1 query1 text"
-    ". image1 image1 image3 image3 query2 query2 text"
-    ". video-icon image4 image4 image4 query3 query3 text"
-    ". image5 image5 image5 image5 . textarea inputs"
-    ". . . . . . . ."
+    ". . . . . . ."
+    ". image1 image1 image2 image2 query text"
+    ". image1 image1 image3 image3 image6 text"
+    ". video-icon image4 image4 image4 image6 text"
+    ". image5 image5 image5 image5 textarea inputs"
+    ". . . . . . ."
 }
 
 @media (max-width: 620px) {
@@ -77,6 +77,12 @@ body {
   grid-area: image5;
 }
 
+.image6 {
+  background-position: center;
+  background-image: url("media/6.jpg");
+  grid-area: image6;
+}
+
 .video-icon {
   background-position: center;
   background-repeat: no-repeat;
@@ -87,7 +93,8 @@ body {
 
 aside {
   grid-area: text;
-  padding: 15px;
+  padding-left: 20px;
+  padding-right: 5px;
   font-family: 'PT Sans', sans-serif;
   line-height: 1.4em;
   font-size: 17px;
@@ -96,19 +103,16 @@ aside {
 }
 
 query-element {
-  padding: 20px;
-}
-
-.query1 {
-  grid-area: query1;
+  grid-area: query;
+  padding: 10px;
 }
 
 .query2 {
-  grid-area: query2;
+  margin-top: 40px;
 }
 
 .query3 {
-  grid-area: query3;
+  margin-top: 80px;
 }
 
 .nav__form {
@@ -132,7 +136,7 @@ query-element {
   grid-area: inputs;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 70px 20px 20px 10px;
 }
 
 #email {
@@ -222,6 +226,7 @@ query-element {
   margin-left: 10px;
   min-height: 115px;
   font-size: 20px;
+  color: #263346e6;
 }
 
 .video__link {
@@ -287,8 +292,8 @@ query-element {
 .footer__button {
   height: 20px;
   width: 30px;
-  border: 1px solid #263346e6;
-  background-color: #4b6777;
+  border: 1px solid rgb(188, 208, 247);
+  background-color: #263346e6;
   border-radius: 2px;
   outline: none;
   box-sizing: border-box;
