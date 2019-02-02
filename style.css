@@ -17,14 +17,15 @@ body {
   display: grid;
   grid-gap: 1px;
   width: 100%;
+  height: 90vh;
   grid-template-columns: 20px repeat(4, calc(100% / 10)) 10px calc(100% / 4) auto;
-  grid-template-rows: 20px repeat(3, 100px) 150px 20px;
+  grid-template-rows: 20px repeat(3, 130px) 170px 20px;
   grid-template-areas:
     ". . . . . . . ."
-    ". image1 image1 image2 image2 . text query1"
-    ". image1 image1 image3 image3 . text query2"
-    ". . image4 image4 image4 . text query3"
-    ". image5 image5 . . . textarea inputs"
+    ". image1 image1 image2 image2 query1 query1 text"
+    ". image1 image1 image3 image3 query2 query2 text"
+    ". video-icon image4 image4 image4 query3 query3 text"
+    ". image5 image5 image5 image5 . textarea inputs"
     ". . . . . . . ."
 }
 
@@ -74,6 +75,13 @@ body {
   background-position: center;
   background-image: url("media/5.jpg");
   grid-area: image5;
+}
+
+.video-icon {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("media/baseline-videocam-24px.svg");
+  grid-area: video-icon;
 }
 
 aside {

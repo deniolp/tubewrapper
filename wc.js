@@ -16,7 +16,7 @@
       template.innerHTML = `
         <style>
         input {
-          width: 50%;
+          width: 100%;
           border: 1px solid #dfe1e5;
           box-shadow: none;
           font-size: 16px;
@@ -92,7 +92,7 @@
       popup.className = `popup`;
       popup.textContent = texts[i];
       i++;
-      img.src = `media/outline_info_black_18dp.png`;
+      img.src = `media/outline-info-24px.svg`;
       icon.appendChild(img);
 
       style.textContent = `
