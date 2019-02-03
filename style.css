@@ -175,8 +175,7 @@ query-element {
 }
 
 #email {
-  width: 50%;
-  margin-bottom: 20px;
+  width: 70%;
 }
 
 .form input,
@@ -186,7 +185,6 @@ query-element {
   color: #263346e6;
   outline: none;
   background-color: #fff;
-  padding: 5px;
   font-family: 'PT Sans', sans-serif;
 }
 
@@ -201,8 +199,8 @@ query-element {
 }
 
 .form input[type="submit"] {
-  width: 110px;
-  height: 30px;
+  margin-top: 10px;
+  width: 40%;
 }
 
 .videos {
