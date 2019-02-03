@@ -129,6 +129,7 @@ query-element {
 }
 
 .form textarea {
+  margin: 10px 0 0 10px;
   grid-area: textarea;
 }
 
