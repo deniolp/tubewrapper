@@ -55,6 +55,27 @@ body {
   }
 }
 
+@media (max-width: 460px) {
+  .nav {
+    grid-template-columns: 10px 1fr 10px;
+    grid-template-rows: 20px 1fr 150px 1fr  150px 80px 100px 120px 100px 200px 270px 150px 20px;
+    grid-template-areas:
+    ". . ."
+    ". image1 ."
+    ". image2 ."
+    ". text ."
+    ". image3 ."
+    ". video-icon ."
+    ". image4 ."
+    ". image5 ."
+    ". textarea ."
+    ". inputs ."
+    ". image6 ."
+    ". query ."
+    ". . ."
+  }
+}
+
 .image {
   background-size: cover;
 }
