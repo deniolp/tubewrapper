@@ -22,8 +22,8 @@ body {
   grid-template-rows: 20px repeat(3, 150px) 175px 20px;
   grid-template-areas:
     ". . . . . . ."
-    ". image1 image1 image2 image2 query text"
-    ". image1 image1 image3 image3 image6 text"
+    ". image2 image2 image1 image1 query text"
+    ". image3 image3 image1 image1 image6 text"
     ". video-icon image4 image4 image4 image6 text"
     ". image5 image5 image5 image5 textarea inputs"
     ". . . . . . ."
@@ -77,7 +77,9 @@ body {
 }
 
 .image {
+  background-position: center;
   background-size: cover;
+  background-repeat: no-repeat
 }
 
 .image1 {
@@ -87,31 +89,38 @@ body {
 }
 
 .image2 {
-  background-position: right 0 bottom 70%;
   background-image: url("media/4.jpg");
   grid-area: image2;
 }
 
+@media (max-width: 460px) {
+  .image2 {
+    background-position: top -50px left 0;
+  }
+}
+
 .image3 {
-  background-position: center;
   background-image: url("media/3.jpg");
   grid-area: image3;
 }
 
 .image4 {
-  background-position: right 0 bottom 30%;
   background-image: url("media/2.jpg");
   grid-area: image4;
 }
 
+@media (max-width: 460px) {
+  .image4 {
+    background-position: top -120px left 0;
+  }
+}
+
 .image5 {
-  background-position: center;
   background-image: url("media/5.jpg");
   grid-area: image5;
 }
 
 .image6 {
-  background-position: center;
   background-image: url("media/6.jpg");
   grid-area: image6;
 }
@@ -165,6 +174,7 @@ query-element {
   margin-top: 10px;
   margin-left: 10px;
   grid-area: textarea;
+  padding: 10px;
 }
 
 .form__inputs {
