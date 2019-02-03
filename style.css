@@ -79,7 +79,12 @@ body {
 .image {
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
+  opacity: .9;
+}
+
+.image:hover {
+  opacity: 1;
 }
 
 .image1 {
