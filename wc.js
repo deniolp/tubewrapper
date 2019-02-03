@@ -16,7 +16,7 @@
       template.innerHTML = `
         <style>
         input {
-          width: 70%;
+          width: 50%;
           border: 1px solid #263346e6;
           box-shadow: none;
           font-size: 16px;
@@ -34,7 +34,7 @@
         }
         
         button {
-          width: 20%;
+          width: 25%;
           min-width: 45px;
           padding: 5px;
           border: 1px solid #263346e6;
@@ -124,13 +124,14 @@
           right: -20px;
         }
         
-        @media (max-width: 620px) {
+        @media (max-width: 705px) {
           .icon {
-            
+            right: 3px;
           }
           
           .popup {
-            
+            top: 0px;
+            left: -190px;
           }
         }
         

@@ -29,17 +29,29 @@ body {
     ". . . . . . ."
 }
 
-@media (max-width: 620px) {
+@media (max-width: 705px) {
   .nav {
-    grid-template-columns: 10px repeat(2, calc(100% / 5)) repeat(2, calc(100% / 3)) 10px;
-    grid-template-rows: 10px repeat(3, 100px) 150px 10px;
+    height: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20px repeat(7, 1fr) 20px;
     grid-template-areas:
-    ". . . . . ."
-    ". image1 image2 text textarea ."
-    ". image3 image3 text inputs ."
-    ". image4 image5 text . ."
-    "query1 query1 query2 query2 query3 query3"
-    ". . . . . ."
+    ". ."
+    "image1 image2"
+    "image1 query"
+    "video-icon image3"
+    "image4 text"
+    "image5 text"
+    "textarea image6"
+    "inputs image6"
+    ". ."
+  }
+
+  aside {
+    padding-top: 20px;
+  }
+
+  .form textarea {
+    margin-right: 10px;
   }
 }
 
@@ -129,7 +141,8 @@ query-element {
 }
 
 .form textarea {
-  margin: 10px 0 0 10px;
+  margin-top: 10px;
+  margin-left: 10px;
   grid-area: textarea;
 }
 
