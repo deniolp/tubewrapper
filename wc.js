@@ -121,7 +121,7 @@
         .icon {
           position: absolute;
           top: 6px;
-          right: -20px;
+          right: -10px;
         }
         
         @media (max-width: 705px) {
