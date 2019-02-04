@@ -138,6 +138,10 @@ body {
   grid-area: video-icon;
 }
 
+.video-icon:hover {
+  background-image: url("media/svg-red.svg");
+}
+
 aside {
   grid-area: text;
   padding-left: 20px;
