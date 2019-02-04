@@ -23,3 +23,4 @@ _Some goals that was defined regarding this project:_
 
 _I'd be very glad to receive any advice_
 * You can give me advice by means of the form in the site (Netlify form).
+* If Netlify is down, you can only see site at GitHub pages [here](https://deniolp.github.io/tubewrapper/).
