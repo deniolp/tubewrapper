@@ -58,12 +58,12 @@ body {
 @media (max-width: 460px) {
   .nav {
     grid-template-columns: 10px 1fr 10px;
-    grid-template-rows: 20px 1fr 150px 1fr  150px 80px 100px 120px 100px 200px 270px 150px 20px;
+    grid-template-rows: 20px 1fr 1fr 150px 150px 80px 150px 120px 100px 110px 270px 150px 20px;
     grid-template-areas:
     ". . ."
     ". image1 ."
-    ". image2 ."
     ". text ."
+    ". image2 ."
     ". image3 ."
     ". video-icon ."
     ". image4 ."
@@ -116,7 +116,7 @@ body {
 
 @media (max-width: 460px) {
   .image4 {
-    background-position: top -120px left 0;
+    background-position: top -50px left 0;
   }
 }
 
@@ -187,6 +187,12 @@ query-element {
   display: flex;
   flex-direction: column;
   padding: 70px 20px 20px 10px;
+}
+
+@media (max-width: 460px) {
+  .form__inputs {
+    padding: 10px;
+  }
 }
 
 #email {
