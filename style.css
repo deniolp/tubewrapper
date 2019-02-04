@@ -136,10 +136,13 @@ body {
   background-size: 80px;
   background-image: url("media/baseline-videocam-24px.svg");
   grid-area: video-icon;
+  transition: all ease 0.3s;
 }
 
 .video-icon:hover {
   background-image: url("media/svg-red.svg");
+  transform: rotate(180deg);
+  transition: all ease 0.3s;
 }
 
 aside {
