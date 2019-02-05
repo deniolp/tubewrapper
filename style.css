@@ -174,7 +174,7 @@ query-element {
 }
 
 .nav__form label {
-  color: #263346e6;
+  color: #462641e6;
 }
 
 .form {
@@ -187,6 +187,11 @@ query-element {
   margin-left: 10px;
   grid-area: textarea;
   padding: 10px;
+}
+
+.form textarea:hover + .form__inputs #email,
+.form textarea:focus + .form__inputs #email {
+  border: 1px solid #eb10c6e6;
 }
 
 .form__inputs {
