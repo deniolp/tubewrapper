@@ -83,6 +83,16 @@ body {
   opacity: .9;
 }
 
+.image h2 {
+  color: #f1f4f8e6;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 2em;
+  font-weight: 900;
+  margin-top: 20%;
+  opacity: .9;
+  text-align: center;
+}
+
 .image:hover {
   opacity: 1;
 }
