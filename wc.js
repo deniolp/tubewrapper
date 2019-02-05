@@ -34,11 +34,13 @@
           border-color: rgba(223,225,229,0);
         }
 
-        input:hover {
+        input:hover,
+        input:focus {
           width: 65%;
         }
 
-        input:hover + button {
+        input:hover + button,
+        input:focus + button {
           width: 15%;
         }
         
@@ -55,6 +57,7 @@
           outline: none;
           background-color: #fff;
           box-sizing: border-box;
+          transition: all ease 0.3s;
         }
         
         .nav-bar__item {
