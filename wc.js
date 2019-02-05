@@ -108,6 +108,18 @@
       img.src = `media/outline-info-24px.svg`;
       icon.appendChild(img);
 
+      let fireRedInfo = function () {
+        img.src = `media/info-red.svg`;
+        img.addEventListener(`mouseout`, function () {
+          img.src = `media/outline-info-24px.svg`;
+          img.removeEventListener(`mouseover`);
+        });
+        icon.addEventListener(`focusout`, function () {
+          img.src = `media/outline-info-24px.svg`;
+          icon.removeEventListener(`focusin`);
+        });
+      };
+
       style.textContent = `
         .wrapper {
           position: absolute;
@@ -151,10 +163,14 @@
           width: 20px;
         }
         
-        .icon:hover + .popup, .icon:focus + .popup {
+        .icon:hover + .popup,
+        .icon:focus + .popup {
           display: inline-block;
         }
       `;
+
+      img.addEventListener(`mouseover`, fireRedInfo);
+      icon.addEventListener(`focusin`, fireRedInfo);
 
       shadow.appendChild(style);
       shadow.appendChild(wrapper);
