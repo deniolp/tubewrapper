@@ -93,6 +93,10 @@ body {
   opacity: 1;
 }
 
+.image:hover > h2 {
+  color: rgba(255, 0, 0, 0.664);
+}
+
 .image1 {
   background-position: left;
   background-image: url("media/1.jpg");
