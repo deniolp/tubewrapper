@@ -12,7 +12,10 @@
     "url": "git+https://github.com/deniolp/tubewrapper.git"
   },
   "keywords": [
-    "webcomponents"
+    "web-components",
+    "api",
+    "youtube",
+    "grids"
   ],
   "author": "Denis Popov",
   "license": "ISC",
