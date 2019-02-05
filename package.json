@@ -1,7 +1,7 @@
 {
   "name": "mywebcomp",
   "version": "1.0.0",
-  "description": "Learning Web Components",
+  "description": "Youtube wrapper. Learning Web Components and Google Youtube API",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/deniolp/myWebComp.git"
+    "url": "git+https://github.com/deniolp/tubewrapper.git"
   },
   "keywords": [
     "webcomponents"
@@ -17,9 +17,9 @@
   "author": "Denis Popov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/deniolp/myWebComp/issues"
+    "url": "https://github.com/deniolp/tubewrapper/issues"
   },
-  "homepage": "https://github.com/deniolp/myWebComp#readme",
+  "homepage": "https://github.com/deniolp/tubewrapper#readme",
   "devDependencies": {
     "browser-sync": "^2.26.3",
     "eslint": "^5.12.1",
