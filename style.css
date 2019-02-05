@@ -287,6 +287,10 @@ query-element {
   box-shadow: none;
 }
 
+.video:hover > h2 {
+  color: rgba(255, 0, 0, 0.664);
+}
+
 .video__wrapper {
   position: relative;
   width: 100%;
