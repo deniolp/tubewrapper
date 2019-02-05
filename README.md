@@ -19,7 +19,7 @@ _Some goals that was defined regarding this project:_
 
 #### _Screenshot_ =>
 
-<img width="500" src="https://user-images.githubusercontent.com/30692310/52259495-5c9bc600-293c-11e9-825d-7682fbb776fc.png">
+<img width="450" src="https://user-images.githubusercontent.com/30692310/52259973-ded8ba00-293d-11e9-89cf-1fc88a0e0f09.png">
 
 _I'd be very glad to receive any advice_
 * You can give me advice by means of the form in the site (Netlify form).
