@@ -249,6 +249,11 @@ query-element {
   width: 40%;
 }
 
+.form input[type="submit"]:hover,
+.form input[type="submit"]:focus {
+  color: red;
+}
+
 .videos {
   background-color: #ffffff;
   margin: 0;
