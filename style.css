@@ -33,7 +33,7 @@ body {
   .nav {
     height: auto;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 20px repeat(7, 1fr) 20px;
+    grid-template-rows: 5px repeat(7, 1fr) 5px;
     grid-template-areas:
     ". ."
     "image1 image2"
@@ -46,10 +46,6 @@ body {
     ". ."
   }
 
-  aside {
-    padding-top: 20px;
-  }
-
   .form textarea {
     margin-right: 10px;
   }
@@ -57,8 +53,8 @@ body {
 
 @media (max-width: 460px) {
   .nav {
-    grid-template-columns: 10px 1fr 10px;
-    grid-template-rows: 20px 1fr 1fr 150px 150px 80px 150px 120px 100px 110px 270px 150px 20px;
+    grid-template-columns: 5px 1fr 5px;
+    grid-template-rows: 5px 1fr 1fr 150px 150px 80px 150px 120px 100px 110px 270px 150px 5px;
     grid-template-areas:
     ". . ."
     ". image1 ."
@@ -164,6 +160,13 @@ aside {
   font-size: 17px;
   font-weight: 900;
   color: #263346e6;
+}
+
+@media (max-width: 768px) {
+  aside {
+    padding-top: 20px;
+    padding-left: 10px;
+  }
 }
 
 query-element {
