@@ -120,11 +120,9 @@
         img.src = `media/info-red.svg`;
         img.addEventListener(`mouseout`, function () {
           img.src = `media/outline-info-24px.svg`;
-          img.removeEventListener(`mouseover`);
         });
         icon.addEventListener(`focusout`, function () {
           img.src = `media/outline-info-24px.svg`;
-          icon.removeEventListener(`focusin`);
         });
       };
 
