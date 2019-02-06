@@ -193,7 +193,7 @@
     let tokenNext = ``;
     let query = ``;
     let search = ``;
-    let path = `/myWebComp/sw.js`;
+    let path = `/tubewrapper/sw.js`;
     if (location.host === `localhost:3000`) {
       path = `/sw.js`;
     }
