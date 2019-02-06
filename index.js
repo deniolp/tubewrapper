@@ -193,10 +193,7 @@
     let tokenNext = ``;
     let query = ``;
     let search = ``;
-    let path = `/tubewrapper/sw.js`;
-    if (location.host === `localhost:3000`) {
-      path = `/sw.js`;
-    }
+    let path = `/sw.js`;
 
     if (`serviceWorker` in navigator) {
       navigator.serviceWorker.register(path)
