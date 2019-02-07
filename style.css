@@ -93,10 +93,6 @@ body {
   opacity: 1;
 }
 
-.image:hover > h2 {
-  color: rgba(255, 0, 0, 0.664);
-}
-
 .image1 {
   background-position: left;
   background-image: url("media/1.jpg");
@@ -162,7 +158,6 @@ aside {
   font-family: 'PT Sans', sans-serif;
   line-height: 1.4em;
   font-size: 17px;
-  font-weight: 900;
   color: #263346e6;
 }
 
