@@ -217,6 +217,7 @@
           if (search !== ``) {
             query = buttons[inputs.indexOf(input)].id;
             fillVideoList(query, search);
+            input.value = ``;
           }
         }
       });
