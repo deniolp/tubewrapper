@@ -4,7 +4,7 @@
   "description": "Youtube wrapper. Learning Web Components and Google Youtube API",
   "main": "index.js",
   "scripts": {
-    "test": "stylelint 'style.css'",
+    "test": "stylelint 'style.css' && eslint *.js",
     "start": "gulp serve"
   },
   "repository": {

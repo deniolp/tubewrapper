@@ -1,5 +1,3 @@
-'use strict';
-
 (function () {
   let CACHE_NAME = `my-cache`;
   let urlsToCache = [
@@ -32,6 +30,7 @@
               .then(function (response) {
                 return response;
               })
+              // eslint-disable-next-line consistent-return
               .catch(() => {
                 if (isOffline(event.request)) {
                   return cache.match(`offline.html`);
