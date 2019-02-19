@@ -4,7 +4,7 @@
   "description": "Youtube wrapper. Learning Web Components and Google Youtube API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run stylelint",
     "start": "gulp serve"
   },
   "repository": {
