@@ -142,13 +142,13 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 80px;
-  background-image: url("media/baseline-videocam-24px.svg");
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"%3E%3Cpath d="M0 0h24v24H0z" fill="none"/%3E%3Cpath fill="%23263346e6" d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/%3E%3C/svg%3E');
   grid-area: video-icon;
   transition: all ease 0.3s;
 }
 
 .video-icon:hover {
-  background-image: url("media/svg-red.svg");
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"%3E%3Cpath d="M0 0h24v24H0z" fill="none"/%3E%3Cpath fill="red" d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/%3E%3C/svg%3E');
   transform: rotate(180deg);
   transition: all ease 0.3s;
 }
