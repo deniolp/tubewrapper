@@ -1,10 +1,10 @@
 {
-  "name": "mywebcomp",
+  "name": "tubewrapper",
   "version": "1.0.0",
   "description": "Youtube wrapper. Learning Web Components and Google Youtube API",
   "main": "index.js",
   "scripts": {
-    "test": "npm run stylelint",
+    "test": "stylelint 'style.css'",
     "start": "gulp serve"
   },
   "repository": {
@@ -27,6 +27,17 @@
     "browser-sync": "^2.26.3",
     "eslint": "^5.12.1",
     "eslint-config-htmlacademy": "^0.5.2",
-    "gulp": "^4.0.0"
+    "gulp": "^4.0.0",
+    "stylelint": "^9.10.1",
+    "stylelint-config-htmlacademy": "^0.1.1"
+  },
+  "stylelint": {
+    "extends": "stylelint-config-htmlacademy",
+    "rules": {
+      "selector-type-no-unknown": [true, {
+        "ignore": "custom-elements"
+      }],
+      "selector-max-id": 1
+    }
   }
 }

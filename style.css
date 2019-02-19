@@ -4,7 +4,9 @@ html {
   background-color: rgb(188, 208, 247);
 }
 
-*, *:before, *:after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -26,7 +28,7 @@ body {
     ". image3 image3 image1 image1 image6 text"
     ". video-icon image4 image4 image4 image6 text"
     ". image5 image5 image5 image5 textarea inputs"
-    ". . . . . . ."
+    ". . . . . . .";
 }
 
 @media (max-width: 768px) {
@@ -35,15 +37,15 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 5px repeat(7, 1fr) 5px;
     grid-template-areas:
-    ". ."
-    "image1 image2"
-    "image1 query"
-    "video-icon image3"
-    "image4 text"
-    "image5 text"
-    "textarea image6"
-    "inputs image6"
-    ". ."
+      ". ."
+      "image1 image2"
+      "image1 query"
+      "video-icon image3"
+      "image4 text"
+      "image5 text"
+      "textarea image6"
+      "inputs image6"
+      ". .";
   }
 
   .form textarea {
@@ -56,19 +58,19 @@ body {
     grid-template-columns: 5px 1fr 5px;
     grid-template-rows: 5px 1fr 1fr 150px 150px 80px 150px 120px 100px 110px 270px 150px 5px;
     grid-template-areas:
-    ". . ."
-    ". image1 ."
-    ". text ."
-    ". image2 ."
-    ". image3 ."
-    ". video-icon ."
-    ". image4 ."
-    ". image5 ."
-    ". textarea ."
-    ". inputs ."
-    ". image6 ."
-    ". query ."
-    ". . ."
+      ". . ."
+      ". image1 ."
+      ". text ."
+      ". image2 ."
+      ". image3 ."
+      ". video-icon ."
+      ". image4 ."
+      ". image5 ."
+      ". textarea ."
+      ". inputs ."
+      ". image6 ."
+      ". query ."
+      ". . .";
   }
 }
 
@@ -76,16 +78,16 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .image h2 {
   color: #f1f4f8e6;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   font-size: 2em;
   font-weight: 900;
   margin-top: 20%;
-  opacity: .9;
+  opacity: 0.9;
   text-align: center;
 }
 
@@ -155,7 +157,7 @@ aside {
   grid-area: text;
   padding-left: 20px;
   padding-right: 5px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   line-height: 1.4em;
   font-size: 17px;
   color: #263346e6;
@@ -191,7 +193,7 @@ query-element {
 
 .form {
   display: contents;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
 }
 
 .form textarea {
@@ -229,8 +231,8 @@ query-element {
   font-size: 16px;
   color: #263346e6;
   outline: none;
-  background-color: #fff;
-  font-family: 'PT Sans', sans-serif;
+  background-color: #ffffff;
+  font-family: "PT Sans", sans-serif;
 }
 
 .form input:hover,
@@ -240,7 +242,7 @@ query-element {
 .form textarea:hover,
 .form textarea:focus {
   box-shadow: 0 1px 20px 0 rgba(1, 3, 11, 0.95);
-  border-color: rgba(223,225,229,0);
+  border-color: rgba(223, 225, 229, 0);
 }
 
 .form input[type="submit"] {
@@ -294,7 +296,8 @@ query-element {
   background-color: #000000;
 }
 
-.video__wrapper:hover .video__button-shape, .video__button:focus .video__button-shape {
+.video__wrapper:hover .video__button-shape,
+.video__button:focus .video__button-shape {
   fill: #ff0000;
   fill-opacity: 1;
 }
@@ -308,7 +311,7 @@ query-element {
 }
 
 .video__header {
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   margin-bottom: 0;
   margin-left: 10px;
   min-height: 115px;
@@ -384,7 +387,7 @@ query-element {
   border-radius: 2px;
   outline: none;
   box-sizing: border-box;
-  color: #fff;
+  color: #ffffff;
   font-weight: bold;
   padding-bottom: 3px;
 }
@@ -396,9 +399,10 @@ query-element {
   transform: translateX(-50%);
 }
 
-.footer__button:hover, .footer__button:focus {
-  box-shadow: 0 1px 20px 0 rgba(32,33,36,0.28);
-  border-color: rgba(223,225,229,0);
+.footer__button:hover,
+.footer__button:focus {
+  box-shadow: 0 1px 20px 0 rgba(32, 33, 36, 0.28);
+  border-color: rgba(223, 225, 229, 0);
 }
 
 .footer__button--prev {
@@ -406,7 +410,7 @@ query-element {
 }
 
 .footer__button--disabled {
-  box-shadow: 0 1px 20px 0 rgba(32,33,36,0.28);
-  border-color: rgba(223,225,229,0);
+  box-shadow: 0 1px 20px 0 rgba(32, 33, 36, 0.28);
+  border-color: rgba(223, 225, 229, 0);
   color: #3f3b3b;
 }
