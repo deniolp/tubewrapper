@@ -46,6 +46,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "eslint-utils": "^1.4.2",
-    "lodash": "^4.17.14"
+    "lodash": "^4.17.14",
+    "minimist": "^1.2.5"
   }
 }
