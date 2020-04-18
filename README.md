@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c2abaa1f-5a4a-4faf-bfbd-09bcb1814193/deploy-status)](https://tubewrapper.netlify.com/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c2abaa1f-5a4a-4faf-bfbd-09bcb1814193/deploy-status)](https://tubewrapper.netlify.app/)
 
 [![Build Status](https://travis-ci.com/deniolp/tubewrapper.svg?branch=master)](https://travis-ci.com/deniolp/tubewrapper)
 # Tubewrapper (Youtube wrapper)
